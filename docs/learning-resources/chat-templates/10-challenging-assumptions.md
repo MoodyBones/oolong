@@ -1,4 +1,4 @@
-I'm stuck on the Goodsomeday project and I think I might be making incorrect assumptions. Help me debug my thinking.
+I'm stuck on the Oolong project and I think I might be making incorrect assumptions. Help me debug my thinking.
 
 **Context:**
 

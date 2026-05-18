@@ -1,6 +1,6 @@
 # Contributing Guidelines Analysis: Annie Duke Decision Framework
 
-**Document Purpose:** Strategic analysis of contribution policies for Goodsomeday open source project
+**Document Purpose:** Strategic analysis of contribution policies for Oolong open source project
 **Created:** 20 October 2025
 **Framework:** Annie Duke's probabilistic decision-making approach
 
@@ -278,7 +278,7 @@ Let's calculate **Expected Value of Contribution Policy**:
 ```markdown
 ## Current Status: Building in Public, Not Yet Accepting Contributions
 
-Goodsomeday is in active development. I'm building in public and documenting
+Oolong is in active development. I'm building in public and documenting
 the learning journey, but **not accepting code contributions yet**.
 
 ### Why?

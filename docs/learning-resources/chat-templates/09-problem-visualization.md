@@ -1,4 +1,4 @@
-I'm stuck on a technical/conceptual problem in the Goodsomeday project and need help visualizing it.
+I'm stuck on a technical/conceptual problem in the Oolong project and need help visualizing it.
 
 **Context:**
 

@@ -594,7 +594,7 @@ Without these files, the trigger can't work properly.
 - **Skip questions if they're flowing** - don't interrupt momentum
 - **Add playfulness when appropriate** - match their energy
 - **Be directive when asked** - sometimes "just tell me" is valid
-- **Connect to their values** - Goodsomeday is about fair work and accessibility
+- **Connect to their values** - Oolong is about fair work and accessibility
 - **Honor their intuition** - if they want to work "out of order," support that
 - **Celebrate small wins** - 20 min of engaged work > 3 hours forcing
 
@@ -603,7 +603,7 @@ Without these files, the trigger can't work properly.
 ## Context References
 
 **This system exists within:**
-- Goodsomeday project (career journey stories, Leaky Pipeline Report inspired)
+- Oolong project (career journey stories, Leaky Pipeline Report inspired)
 - Visual-first learning approach (n8n, Claude Code, Figma MCP)
 - 6-milestone structure (Foundation → Infrastructure → Visual Backend → Frontend → Integration → Launch)
 - Building in public, open source, values-driven
@@ -645,7 +645,7 @@ When user triggers, remember:
 ✅ **Flexible** (adapts to state and time)  
 ✅ **References actual files** (doesn't recreate)  
 ✅ **Connected to other templates** (knows when to redirect)  
-✅ **Project-specific** (understands Goodsomeday)  
+✅ **Project-specific** (understands Oolong)  
 ✅ **User-aware** (knows Mel's patterns and values)  
 ✅ **Robust decision logic** (clear matrix for suggestions)  
 ✅ **Override-friendly** (user stays in control)

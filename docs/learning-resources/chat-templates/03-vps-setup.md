@@ -1,4 +1,4 @@
-I need help with VPS and server setup for the Goodsomeday project.
+I need help with VPS and server setup for the Oolong project.
 
 **Context:**
 

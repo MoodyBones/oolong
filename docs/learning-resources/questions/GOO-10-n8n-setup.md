@@ -12,7 +12,7 @@
 
 Walk through the architecture:
 
-1. Draw (or describe) the flow: `https://n8n.goodsomeday.com` → what happens at each step until it reaches n8n?
+1. Draw (or describe) the flow: `https://n8n.oolong.com` → what happens at each step until it reaches n8n?
 2. What is Nginx actually doing here? Why not just access `http://72.60.78.175:5678` directly?
 3. You had to stop Docker because it was using port 80. Why does Nginx need port 80 AND port 443?
 4. What's the difference between a reverse proxy and a forward proxy?

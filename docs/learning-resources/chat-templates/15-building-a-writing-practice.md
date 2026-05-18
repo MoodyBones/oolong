@@ -44,7 +44,7 @@ You're not "bad at writing." You have a gap between:
 
 **Most people try to do all three at once. That's why it's hard.**
 
-Like your Goodsomeday approach:
+Like your Oolong approach:
 
 - You don't design the database while typing SQL
 - You don't write components while debugging
@@ -195,7 +195,7 @@ Turns out, I just needed a different process.
 
 ### STORY
 
-- Building Goodsomeday, I had clear vision
+- Building Oolong, I had clear vision
 - Used Claude to write all the docs
 - Realized: docs can be automated, but authentic voice can't
 - Discovered I'm not bad at writing - I'm bad at traditional writing process
@@ -413,9 +413,9 @@ Read through asking:
 
 ## Practice Assignments
 
-### Assignment 1: Goodsomeday Learnings
+### Assignment 1: Oolong Learnings
 
-Write about your top 3 learnings from building Goodsomeday.
+Write about your top 3 learnings from building Oolong.
 
 **Prompt questions for Phase 1:**
 

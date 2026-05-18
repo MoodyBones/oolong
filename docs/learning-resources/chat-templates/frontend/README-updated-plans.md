@@ -1,6 +1,6 @@
 # Frontend Build - Updated Plans (Corrected!)
 
-**Goodsomeday - November 5, 2025**
+**Oolong - November 5, 2025**
 
 ---
 
@@ -28,14 +28,14 @@ I analyzed your Figma Make chat history and corrected the plans to match what yo
 
 I created **4 focused documents** instead of the original 3:
 
-### 1. [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md) ⭐ START HERE
+### 1. [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md) ⭐ START HERE
 
 **Purpose:** Paste this at the beginning of every Claude Code session
 
 **What it does:**
 
 - Extends your existing context primer
-- Adds Goodsomeday-specific context
+- Adds Oolong-specific context
 - Tells Claude Code what you've designed
 - Sets expectations for high-level guidance
 
@@ -130,7 +130,7 @@ code .
 
 **Step 2:** Give Claude Code context
 
-1. Copy [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md)
+1. Copy [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md)
 2. Paste into Claude Code
 3. Wait for confirmation it's read your context
 
@@ -312,7 +312,7 @@ You're successful today if you can:
 
 ### Right Now
 
-1. Open [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md)
+1. Open [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md)
 2. Copy the entire prompt
 3. Start Claude Code session
 4. Paste prompt to give context
@@ -326,7 +326,7 @@ You're successful today if you can:
 ### First Command
 
 ```bash
-npx create-next-app@latest goodsomeday-frontend
+npx create-next-app@latest oolong-frontend
 ```
 
 ---
@@ -335,7 +335,7 @@ npx create-next-app@latest goodsomeday-frontend
 
 | Document                                                                                | Use When                | What It Tells You           |
 | --------------------------------------------------------------------------------------- | ----------------------- | --------------------------- |
-| [Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md) | Start of every session  | Context for Claude Code     |
+| [Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md) | Start of every session  | Context for Claude Code     |
 | [Strategic Build Plan](computer:///mnt/user-data/outputs/strategic-build-plan.md)       | Planning & structure    | High-level approach         |
 | [Visual Design Mapping](computer:///mnt/user-data/uploads/visual-design-mapping.md)     | Implementing components | Your actual design specs    |
 | [Quick Reference](computer:///mnt/user-data/outputs/quick-reference-corrected.md)       | Need quick facts        | Colors, spacing, dos/don'ts |
@@ -360,6 +360,6 @@ npx create-next-app@latest goodsomeday-frontend
 
 ---
 
-**Ready to build?** Start with the [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md)! 🚀
+**Ready to build?** Start with the [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md)! 🚀
 
 Good luck - you've got this! 💪

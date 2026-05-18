@@ -1,4 +1,4 @@
-# Goodsomeday: Foundation Document
+# Oolong: Foundation Document
 
 **A Visual-First Learning Journey in 6 Milestones**
 
@@ -118,8 +118,8 @@
 
 **Deliverables:**
 
-- Linear project: Goodsomeday
-- GitHub repo: MoodyBones/goodsomeday
+- Linear project: Oolong
+- GitHub repo: MoodyBones/oolong
 - docs/learning-resources/ structure
 - docs/learning-resources/chat-templates/ (12 templates)
 - docs/learning-resources/chat-selection-guide.md
@@ -581,7 +581,7 @@ Install PostgreSQL, configure for n8n and application use, and create initial da
 **Acceptance Criteria:**
 
 - PostgreSQL installed on VPS
-- Database created: goodsomeday_prod
+- Database created: oolong_prod
 - Database user created with proper permissions
 - Can connect from n8n
 - Backup strategy documented
@@ -1513,7 +1513,7 @@ Assign tickets to corresponding milestones. Linear will show progress automatica
 Track weekly progress:
 
 ```markdown
-# Goodsomeday Progress Tracking
+# Oolong Progress Tracking
 
 ## Week 1: Foundation & Infrastructure
 
@@ -1590,7 +1590,7 @@ Track weekly progress:
 ## Project Structure
 
 ```
-goodsomeday/
+oolong/
 ├── README.md
 ├── docs/
 │   ├── foundation.md (this document)

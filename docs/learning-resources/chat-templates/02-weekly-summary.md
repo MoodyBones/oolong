@@ -1,4 +1,4 @@
-I'm on Week 1 of building Goodsomeday (full-stack learning project). I need a weekly summary and planning session.
+I'm on Week 1 of building Oolong (full-stack learning project). I need a weekly summary and planning session.
 
 **Previous work saved in:**
 
@@ -22,7 +22,7 @@ I'm on Week 1 of building Goodsomeday (full-stack learning project). I need a we
 
 Here's what I completed this week: [paste your updates]
 
-Week 2 summary for Goodsomeday project.
+Week 2 summary for Oolong project.
 
 **Previous context:**
 

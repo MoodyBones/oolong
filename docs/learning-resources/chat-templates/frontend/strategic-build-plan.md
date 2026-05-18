@@ -1,4 +1,4 @@
-# Goodsomeday Frontend - Strategic Build Plan
+# Oolong Frontend - Strategic Build Plan
 
 **High-Level Roadmap (No Prescriptive Design Decisions)**
 
@@ -263,7 +263,7 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 ### First Command
 
 ```bash
-npx create-next-app@latest goodsomeday-frontend
+npx create-next-app@latest oolong-frontend
 # ✅ TypeScript? Yes
 # ✅ ESLint? Yes
 # ✅ Tailwind? Yes

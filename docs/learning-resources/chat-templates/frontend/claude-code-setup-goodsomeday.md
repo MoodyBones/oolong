@@ -1,4 +1,4 @@
-# Claude Code Context Primer - Goodsomeday Frontend Extension
+# Claude Code Context Primer - Oolong Frontend Extension
 
 **When to use:** At the START of every Claude Code session, BEFORE asking for help
 
@@ -103,14 +103,14 @@ What's left: execute on VPS, create learning docs. Let me help with that."
 
 ---
 
-## Additional Context for Goodsomeday Frontend
+## Additional Context for Oolong Frontend
 
 **IMPORTANT:** Add this section to the copy-paste prompt above when working on frontend:
 
 ```
 ---
 
-## Goodsomeday Frontend Specific Context
+## Oolong Frontend Specific Context
 
 TECH STACK:
 - Next.js 14 (App Router)
@@ -177,7 +177,7 @@ Then tell me what you found and what's left to build.
 
 ---
 
-### Example: Good Goodsomeday Frontend Response
+### Example: Good Oolong Frontend Response
 
 ```
 User: "Help me with GOO-16: StoryCard"
@@ -215,12 +215,12 @@ Once you confirm, I'll build and test with your mock data."
 - foundation.md - Full project approach
 - schema-design-philosophy.md - Example of product-first thinking
 - 07-strategic-prompting.md - How to get the most from Claude Code
-- strategic-build-plan.md - Goodsomeday high-level roadmap
+- strategic-build-plan.md - Oolong high-level roadmap
 - visual-design-mapping.md - Figma design specifications
 
 ---
 
 _Original created: 2025-10-20_
-_Goodsomeday extension added: 2025-11-05_
+_Oolong extension added: 2025-11-05_
 _Use this at the START of EVERY Claude Code session_
 _Saves 30+ minutes of context correction per session_

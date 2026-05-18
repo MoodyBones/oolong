@@ -1,6 +1,6 @@
-# Goodsomeday Setup Guide
+# Oolong Setup Guide
 
-Complete deployment guide for setting up the Goodsomeday platform from scratch.
+Complete deployment guide for setting up the Oolong platform from scratch.
 
 **Target Environment:** Ubuntu 22.04 LTS on Hostinger VPS
 **Prerequisites:** Domain name, basic command line knowledge
@@ -154,7 +154,7 @@ sudo ufw status verbose
 2. Find DNS management for your domain
 3. Add A record:
    - **Type:** A
-   - **Name:** `n8n` (creates n8n.goodsomeday.com)
+   - **Name:** `n8n` (creates n8n.oolong.com)
    - **Value:** Your VPS IP address
    - **TTL:** 300 (or default)
 
@@ -162,7 +162,7 @@ sudo ufw status verbose
 
 ```bash
 # From your local machine
-nslookup n8n.goodsomeday.com
+nslookup n8n.oolong.com
 
 # Should show your VPS IP address
 # May take 5-15 minutes to propagate
@@ -212,10 +212,10 @@ nano ~/.n8n/config
 **Add these lines to `~/.n8n/config`:**
 
 ```bash
-export N8N_HOST=n8n.goodsomeday.com
+export N8N_HOST=n8n.oolong.com
 export N8N_PORT=5678
 export N8N_PROTOCOL=https
-export WEBHOOK_URL=https://n8n.goodsomeday.com
+export WEBHOOK_URL=https://n8n.oolong.com
 ```
 
 ### 3.4 Install PM2 (Process Manager)
@@ -266,7 +266,7 @@ nginx -v
 **3.5.3 Create n8n Nginx configuration:**
 
 ```bash
-sudo nano /etc/nginx/sites-available/n8n.goodsomeday.com
+sudo nano /etc/nginx/sites-available/n8n.oolong.com
 ```
 
 **Add this configuration:**
@@ -274,7 +274,7 @@ sudo nano /etc/nginx/sites-available/n8n.goodsomeday.com
 ```nginx
 server {
     listen 80;
-    server_name n8n.goodsomeday.com;
+    server_name n8n.oolong.com;
 
     location / {
         proxy_pass http://localhost:5678;
@@ -295,7 +295,7 @@ server {
 
 ```bash
 # Create symbolic link
-sudo ln -s /etc/nginx/sites-available/n8n.goodsomeday.com /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/n8n.oolong.com /etc/nginx/sites-enabled/
 
 # Remove default site
 sudo rm /etc/nginx/sites-enabled/default
@@ -314,7 +314,7 @@ sudo systemctl reload nginx
 sudo apt install -y certbot python3-certbot-nginx
 
 # Get certificate (replace with your domain)
-sudo certbot --nginx -d n8n.goodsomeday.com
+sudo certbot --nginx -d n8n.oolong.com
 
 # Follow prompts:
 # - Enter your email
@@ -333,7 +333,7 @@ sudo certbot renew --dry-run
 
 ### 3.7 Verify n8n is Accessible
 
-1. Open browser and visit: `https://n8n.goodsomeday.com`
+1. Open browser and visit: `https://n8n.oolong.com`
 2. You should see n8n setup wizard
 3. Create admin account
 4. Save credentials securely
@@ -348,7 +348,7 @@ sudo certbot renew --dry-run
 6. Copy webhook URL
 7. Test with curl:
    ```bash
-   curl https://n8n.goodsomeday.com/webhook-test/YOUR_WEBHOOK_PATH
+   curl https://n8n.oolong.com/webhook-test/YOUR_WEBHOOK_PATH
    ```
 
 ---
@@ -383,13 +383,13 @@ sudo -u postgres psql
 
 ```sql
 -- Create database
-CREATE DATABASE goodsomeday_prod;
+CREATE DATABASE oolong_prod;
 
 -- Create user with password (change 'your_password')
-CREATE USER goodsomeday_user WITH PASSWORD 'your_secure_password';
+CREATE USER oolong_user WITH PASSWORD 'your_secure_password';
 
 -- Grant all privileges on database
-GRANT ALL PRIVILEGES ON DATABASE goodsomeday_prod TO goodsomeday_user;
+GRANT ALL PRIVILEGES ON DATABASE oolong_prod TO oolong_user;
 
 -- Exit psql
 \q
@@ -400,15 +400,15 @@ GRANT ALL PRIVILEGES ON DATABASE goodsomeday_prod TO goodsomeday_user;
 ```bash
 # Connect to the new database
 sudo -u postgres psql
-\c goodsomeday_prod
+\c oolong_prod
 ```
 
 ```sql
 -- Grant schema permissions (psql meta-command needs own line!)
-GRANT ALL ON SCHEMA public TO goodsomeday_user;
+GRANT ALL ON SCHEMA public TO oolong_user;
 
 -- Grant permissions on future tables
-ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO goodsomeday_user;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO oolong_user;
 
 -- Exit
 \q
@@ -417,11 +417,11 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL ON TABLES TO goodsomeday_use
 ### 4.4 Test Connection
 
 ```bash
-# Test connection as goodsomeday_user
-psql -h localhost -U goodsomeday_user -d goodsomeday_prod
+# Test connection as oolong_user
+psql -h localhost -U oolong_user -d oolong_prod
 
 # If prompted for password, enter the one you set above
-# You should see: goodsomeday_prod=>
+# You should see: oolong_prod=>
 
 # Exit
 \q
@@ -432,10 +432,10 @@ psql -h localhost -U goodsomeday_user -d goodsomeday_prod
 ```bash
 # Download or create schema.sql (see docs/database/schema.sql)
 # Then run:
-sudo -u postgres psql goodsomeday_prod < /path/to/schema.sql
+sudo -u postgres psql oolong_prod < /path/to/schema.sql
 
 # Verify tables were created
-sudo -u postgres psql goodsomeday_prod -c "\dt"
+sudo -u postgres psql oolong_prod -c "\dt"
 ```
 
 **Expected output:**
@@ -452,22 +452,22 @@ sudo -u postgres psql goodsomeday_prod -c "\dt"
 
 ```bash
 # Load test data
-sudo -u postgres psql goodsomeday_prod < /path/to/seed-data.sql
+sudo -u postgres psql oolong_prod < /path/to/seed-data.sql
 
 # Verify data
-sudo -u postgres psql goodsomeday_prod -c "SELECT COUNT(*) FROM stories;"
+sudo -u postgres psql oolong_prod -c "SELECT COUNT(*) FROM stories;"
 ```
 
 ### 4.7 Configure n8n Database Credential
 
-1. Open n8n UI: `https://n8n.goodsomeday.com`
+1. Open n8n UI: `https://n8n.oolong.com`
 2. Go to "Credentials" → "New"
 3. Select "Postgres"
 4. Fill in:
-   - **Name:** Goodsomeday Postgres
+   - **Name:** Oolong Postgres
    - **Host:** localhost
-   - **Database:** goodsomeday_prod
-   - **User:** goodsomeday_user
+   - **Database:** oolong_prod
+   - **User:** oolong_user
    - **Password:** [your password]
    - **Port:** 5432
    - **SSL:** Disabled (localhost connection)
@@ -488,7 +488,7 @@ sudo -u postgres psql goodsomeday_prod -c "SELECT COUNT(*) FROM stories;"
 
 1. Go to [vercel.com](https://vercel.com) and sign in with GitHub
 2. Click "Add New" → "Project"
-3. Import your `goodsomeday` repository
+3. Import your `oolong` repository
 4. Configure:
    - **Framework Preset:** Next.js
    - **Root Directory:** ./
@@ -496,19 +496,19 @@ sudo -u postgres psql goodsomeday_prod -c "SELECT COUNT(*) FROM stories;"
    - **Output Directory:** .next
 5. Add Environment Variable:
    - **Key:** `NEXT_PUBLIC_API_URL`
-   - **Value:** `https://n8n.goodsomeday.com/webhook`
+   - **Value:** `https://n8n.oolong.com/webhook`
 6. Click "Deploy"
 
 ### 5.3 Configure Custom Domain (Optional)
 
 1. In Vercel project settings → Domains
-2. Add `goodsomeday.com` or `www.goodsomeday.com`
+2. Add `oolong.com` or `www.oolong.com`
 3. Follow DNS instructions to point domain to Vercel
 4. Wait for SSL certificate generation
 
 ### 5.4 Verify Frontend
 
-1. Visit your Vercel URL (e.g., `goodsomeday.vercel.app`)
+1. Visit your Vercel URL (e.g., `oolong.vercel.app`)
 2. Check that the site loads
 3. Test story submission (should connect to n8n backend)
 
@@ -520,21 +520,21 @@ sudo -u postgres psql goodsomeday_prod -c "SELECT COUNT(*) FROM stories;"
 
 **Test Story Submission:**
 
-1. Visit frontend: `https://goodsomeday.vercel.app`
+1. Visit frontend: `https://oolong.vercel.app`
 2. Click "Share Your Story"
 3. Fill out form with test data
 4. Submit
 5. Check n8n workflow execution logs
 6. Verify data in PostgreSQL:
    ```bash
-   sudo -u postgres psql goodsomeday_prod -c "SELECT * FROM stories ORDER BY id DESC LIMIT 1;"
+   sudo -u postgres psql oolong_prod -c "SELECT * FROM stories ORDER BY id DESC LIMIT 1;"
    ```
 
 **Test Story Retrieval:**
 
 ```bash
 # From your local machine
-curl https://n8n.goodsomeday.com/webhook/get-stories
+curl https://n8n.oolong.com/webhook/get-stories
 ```
 
 Should return JSON array of approved stories.
@@ -579,7 +579,7 @@ free -h  # Check memory
 mkdir -p ~/backups
 
 # Run backup (see BACKUP-STRATEGY.md for details)
-sudo -u postgres pg_dump goodsomeday_prod > ~/backups/goodsomeday_prod_$(date +%Y%m%d_%H%M%S).sql
+sudo -u postgres pg_dump oolong_prod > ~/backups/oolong_prod_$(date +%Y%m%d_%H%M%S).sql
 ```
 
 **Automated Backups (Future):**
@@ -589,7 +589,7 @@ sudo -u postgres pg_dump goodsomeday_prod > ~/backups/goodsomeday_prod_$(date +%
 crontab -e
 
 # Add this line for daily 2 AM backups:
-0 2 * * * sudo -u postgres pg_dump goodsomeday_prod > ~/backups/goodsomeday_prod_$(date +\%Y\%m\%d).sql
+0 2 * * * sudo -u postgres pg_dump oolong_prod > ~/backups/oolong_prod_$(date +\%Y\%m\%d).sql
 ```
 
 ### 7.2 Update System Packages
@@ -675,13 +675,13 @@ sudo lsof -i :5432
 **Test connection:**
 
 ```bash
-psql -h localhost -U goodsomeday_user -d goodsomeday_prod
+psql -h localhost -U oolong_user -d oolong_prod
 ```
 
 **Check permissions:**
 
 ```bash
-sudo -u postgres psql goodsomeday_prod -c "\du"
+sudo -u postgres psql oolong_prod -c "\du"
 ```
 
 ### PM2 Service Conflicts
@@ -712,10 +712,10 @@ pm2 logs n8n
 pm2 restart n8n
 
 # Check database
-sudo -u postgres psql goodsomeday_prod
+sudo -u postgres psql oolong_prod
 
 # Backup database
-sudo -u postgres pg_dump goodsomeday_prod > backup.sql
+sudo -u postgres pg_dump oolong_prod > backup.sql
 
 # Check Nginx
 sudo systemctl status nginx

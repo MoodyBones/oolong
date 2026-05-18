@@ -1,4 +1,4 @@
-I need a well-being check-in for the Goodsomeday learning project.
+I need a well-being check-in for the Oolong learning project.
 
 **Context:**
 

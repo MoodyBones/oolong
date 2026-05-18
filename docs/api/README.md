@@ -1,13 +1,13 @@
-# Goodsomeday API Documentation
+# Oolong API Documentation
 
 **Backend:** n8n workflows hosted on VPS
-**Base URL:** `https://n8n.goodsomeday.com/webhook`
+**Base URL:** `https://n8n.oolong.com/webhook`
 
 ---
 
 ## Overview
 
-The Goodsomeday backend is built with n8n (visual workflow automation) rather than traditional REST APIs. All endpoints are n8n webhook workflows that handle data validation, database operations, and business logic through drag-and-drop nodes.
+The Oolong backend is built with n8n (visual workflow automation) rather than traditional REST APIs. All endpoints are n8n webhook workflows that handle data validation, database operations, and business logic through drag-and-drop nodes.
 
 **Why n8n?**
 
@@ -300,8 +300,8 @@ Each endpoint is a separate n8n workflow with these common patterns:
 ```
 Host: localhost (n8n and PostgreSQL on same VPS)
 Port: 5432
-Database: goodsomeday_prod
-User: goodsomeday_user
+Database: oolong_prod
+User: oolong_user
 SSL: Disabled (local connection)
 ```
 
@@ -315,7 +315,7 @@ SSL: Disabled (local connection)
 
 ```bash
 # Submit a story
-curl -X POST https://n8n.goodsomeday.com/webhook/submit-story \
+curl -X POST https://n8n.oolong.com/webhook/submit-story \
   -H "Content-Type: application/json" \
   -d '{
     "story_text": "I was the only girl in my high school computer science class...",
@@ -324,13 +324,13 @@ curl -X POST https://n8n.goodsomeday.com/webhook/submit-story \
   }'
 
 # Get stories
-curl https://n8n.goodsomeday.com/webhook/get-stories?pipeline_stage=student&limit=10
+curl https://n8n.oolong.com/webhook/get-stories?pipeline_stage=student&limit=10
 ```
 
 **Using Postman/Insomnia:**
 
 - Import the collection (TBD - future export)
-- Set base URL: `https://n8n.goodsomeday.com/webhook`
+- Set base URL: `https://n8n.oolong.com/webhook`
 - All endpoints use JSON content type
 
 ---

@@ -90,7 +90,7 @@ Just create `globals.css` with `@import "tailwindcss"` - that's it!
 
 ```css
 @theme {
-  /* Colors - Goodsomeday palette */
+  /* Colors - Oolong palette */
   --color-primary: #000000;
   --color-secondary: #f9d762; /* Golden yellow */
   --color-background: #ffffff;

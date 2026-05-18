@@ -6,7 +6,7 @@ test.describe('Homepage', () => {
   });
 
   test('should load homepage', async ({ page }) => {
-    await expect(page).toHaveTitle(/goodsomeday/i);
+    await expect(page).toHaveTitle(/oolong/i);
   });
 
   test('should display hero section', async ({ page }) => {

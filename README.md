@@ -1,23 +1,23 @@
-# Goodsomeday
+# Oolong
 
 A platform for sharing career journey stories - built while learning **visual-first, AI-assisted full-stack development**.
 
 > **📚 This is a learning project.** I'm a visual learner and frontend developer exploring modern tools (n8n, Claude Code, Figma MCP) that let me build complete products without losing my soul to traditional backend development.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://goodsomeday.vercel.app)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://oolong.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
-## 🎯 What is Goodsomeday?
+## 🎯 What is Oolong?
 
-Goodsomeday is a platform for sharing transformative career journey stories - moments when people faced barriers in tech, reflected on their experiences, and took action that led to meaningful change.
+Oolong is a platform for sharing transformative career journey stories - moments when people faced barriers in tech, reflected on their experiences, and took action that led to meaningful change.
 
 **Inspired by:** Australia's recent [Leaky Pipeline Report](https://www.vic.gov.au/leaky-tech-pipeline-report) showing where we lose women in tech careers.
 
 ### The Story Format: From Barrier to Action
 
-Stories on Goodsomeday follow a narrative arc designed to move from victimhood to empowerment:
+Stories on Oolong follow a narrative arc designed to move from victimhood to empowerment:
 
 1. **What happened** - The negative experience or barrier (burnout, discrimination, imposter syndrome, lack of support)
 2. **Reflection** - How it made them think, what they realized about themselves or the system
@@ -185,7 +185,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 ```bash
 # Clone the repository
 git clone https://github.com/MoodyBones/goodsomeday.git
-cd goodsomeday
+cd oolong
 
 # Install dependencies
 npm install
@@ -214,7 +214,7 @@ For detailed setup instructions including VPS, database, and n8n configuration, 
 ## 📁 Project Structure
 
 ```
-goodsomeday/
+oolong/
 ├── src/
 │   ├── app/                 # Next.js app directory
 │   │   ├── page.tsx        # Home page
@@ -295,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Visual learner • Frontend developer • Accessibility advocate
 
 - GitHub: [@MoodyBones](https://github.com/MoodyBones)
-- Project: [goodsomeday](https://github.com/MoodyBones/goodsomeday)
+- Project: [oolong](https://github.com/MoodyBones/goodsomeday)
 - LinkedIn: [Connect with me](https://www.linkedin.com/in/mel-jones-4a5835182/)
 - Substack: [@m00dy](https://substack.com/@m00dy)
 

@@ -1,4 +1,4 @@
-I need help navigating the people/communication side of the Goodsomeday project.
+I need help navigating the people/communication side of the Oolong project.
 
 **Context:**
 

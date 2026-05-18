@@ -1,4 +1,4 @@
-I need help developing confident humility as I learn full-stack development through Goodsomeday.
+I need help developing confident humility as I learn full-stack development through Oolong.
 
 **Context:**
 

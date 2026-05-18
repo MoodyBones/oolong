@@ -1,4 +1,4 @@
-I need help building a frontend component for Goodsomeday.
+I need help building a frontend component for Oolong.
 
 **Context:**
 

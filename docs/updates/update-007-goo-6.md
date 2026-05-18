@@ -9,7 +9,7 @@
 
 ## What I Built
 
-Initialized the frontend foundation for Goodsomeday:
+Initialized the frontend foundation for Oolong:
 
 **Next.js 14 Setup:**
 

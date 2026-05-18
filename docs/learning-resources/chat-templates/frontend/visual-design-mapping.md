@@ -261,7 +261,7 @@ Mid Career   → Green background
 
 ```
 ┌─────────────────────────────────────────┐
-│ © 2025 Goodsomeday                  🌙  │
+│ © 2025 Oolong                  🌙  │
 │ Built with purpose                      │
 └─────────────────────────────────────────┘
 ```

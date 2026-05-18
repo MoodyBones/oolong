@@ -25,7 +25,7 @@ _Sit with this. What emotion comes up when you name this?_
 
 ---
 
-**"If I imagine someone discovering Goodsomeday and it genuinely helps them - what part of their experience would make me feel 'yes, this is why'?"**
+**"If I imagine someone discovering Oolong and it genuinely helps them - what part of their experience would make me feel 'yes, this is why'?"**
 
 _Connect to the human impact, not the technical achievement._
 

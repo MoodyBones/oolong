@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Goodsomeday project will be documented in this file.
+All notable changes to the Oolong project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -41,12 +41,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Nginx reverse proxy configuration
   - SSL/TLS certificates (Let's Encrypt)
   - PM2 process manager for n8n
-  - DNS configuration (n8n.goodsomeday.com)
+  - DNS configuration (n8n.oolong.com)
 
 - **GOO-11:** PostgreSQL database setup
   - PostgreSQL 16 installation
-  - goodsomeday_prod database creation
-  - goodsomeday_user with restricted permissions
+  - oolong_prod database creation
+  - oolong_user with restricted permissions
   - n8n database credential configuration
   - Backup strategy documentation
 

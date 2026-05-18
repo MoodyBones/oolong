@@ -1,4 +1,4 @@
-I need coaching on strategic prompting for the Goodsomeday project - specifically for Claude Code (development) and Claude API (release notes automation).
+I need coaching on strategic prompting for the Oolong project - specifically for Claude Code (development) and Claude API (release notes automation).
 
 **Context:**
 

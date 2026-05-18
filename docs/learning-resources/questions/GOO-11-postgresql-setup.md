@@ -13,7 +13,7 @@
 Without looking, describe the hierarchy:
 
 1. What's the difference between the PostgreSQL _server_, a _database_, and a _user_?
-2. You created `goodsomeday_user` and `goodsomeday_prod`. Why create a separate user instead of just using the `postgres` superuser?
+2. You created `oolong_user` and `oolong_prod`. Why create a separate user instead of just using the `postgres` superuser?
 3. Walk through what happens when n8n connects to PostgreSQL using that credential you saved. What's checking the password? What database does it access?
 4. You ran `GRANT ALL PRIVILEGES ON DATABASE` and then `GRANT ALL ON SCHEMA public`. Why two separate grants? What does each one do?
 

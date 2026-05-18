@@ -1,4 +1,4 @@
-I need help creating a high-level implementation plan for the Goodsomeday project that I can share with stakeholders (potential users, collaborators, mentors, or interviewers).
+I need help creating a high-level implementation plan for the Oolong project that I can share with stakeholders (potential users, collaborators, mentors, or interviewers).
 
 **Context:**
 

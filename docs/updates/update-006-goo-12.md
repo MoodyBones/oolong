@@ -52,7 +52,7 @@ Transferred schema files to VPS and executed them on PostgreSQL database.
 
 Hit a validation error: seed data included a short placeholder story (85 chars) that violated the 100-character minimum constraint. Rather than weaken the constraint, removed the invalid story. The constraint is protecting the product vision.
 
-Executed `schema.sql` via psql as `goodsomeday_user`:
+Executed `schema.sql` via psql as `oolong_user`:
 
 - Tables created successfully
 - Indexes built
@@ -66,7 +66,7 @@ Executed `seed-data.sql` (after fixing validation issue):
 
 Verified with queries:
 
-- Tables exist and owned by `goodsomeday_user`
+- Tables exist and owned by `oolong_user`
 - All indexes present
 - Check constraints active
 - Triggers working

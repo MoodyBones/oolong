@@ -1,6 +1,6 @@
 # Quick Reference - Corrected
 
-**Goodsomeday Frontend Build**
+**Oolong Frontend Build**
 
 ---
 
@@ -218,19 +218,19 @@ As you build, decide:
 ## 🚀 Start Command
 
 ```bash
-npx create-next-app@latest goodsomeday-frontend
+npx create-next-app@latest oolong-frontend
 # TypeScript: Yes
 # Tailwind: Yes
 # App Router: Yes
 ```
 
-Then use the [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md) to give context.
+Then use the [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md) to give context.
 
 ---
 
 ## 📚 Your Documents
 
-1. **[Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md)** - Paste at start of Claude Code session
+1. **[Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md)** - Paste at start of Claude Code session
 2. **[Strategic Build Plan](computer:///mnt/user-data/outputs/strategic-build-plan.md)** - High-level approach, no prescriptive details
 3. **This Quick Reference** - Essential facts, corrected from Figma
 

@@ -1,4 +1,4 @@
-I'm working on the Goodsomeday project (learning full-stack development) and need coaching on creating a FigJam visual map to review technical concepts from yesterday's conversation.
+I'm working on the Oolong project (learning full-stack development) and need coaching on creating a FigJam visual map to review technical concepts from yesterday's conversation.
 
 **Context:**
 
