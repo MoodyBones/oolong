@@ -333,12 +333,12 @@ npx create-next-app@latest oolong-frontend
 
 ## 📝 Document Reference Guide
 
-| Document                                                                                | Use When                | What It Tells You           |
-| --------------------------------------------------------------------------------------- | ----------------------- | --------------------------- |
-| [Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md) | Start of every session  | Context for Claude Code     |
-| [Strategic Build Plan](computer:///mnt/user-data/outputs/strategic-build-plan.md)       | Planning & structure    | High-level approach         |
-| [Visual Design Mapping](computer:///mnt/user-data/uploads/visual-design-mapping.md)     | Implementing components | Your actual design specs    |
-| [Quick Reference](computer:///mnt/user-data/outputs/quick-reference-corrected.md)       | Need quick facts        | Colors, spacing, dos/don'ts |
+| Document                                                                            | Use When                | What It Tells You           |
+| ----------------------------------------------------------------------------------- | ----------------------- | --------------------------- |
+| [Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md)  | Start of every session  | Context for Claude Code     |
+| [Strategic Build Plan](computer:///mnt/user-data/outputs/strategic-build-plan.md)   | Planning & structure    | High-level approach         |
+| [Visual Design Mapping](computer:///mnt/user-data/uploads/visual-design-mapping.md) | Implementing components | Your actual design specs    |
+| [Quick Reference](computer:///mnt/user-data/outputs/quick-reference-corrected.md)   | Need quick facts        | Colors, spacing, dos/don'ts |
 
 ---
 
