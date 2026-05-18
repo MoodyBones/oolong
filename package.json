@@ -19,7 +19,18 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:debug": "playwright test --debug"
+    "test:e2e:debug": "playwright test --debug",
+    "lighthouse": "lhci autorun",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ]
   },
   "repository": {
     "type": "git",
@@ -57,6 +68,10 @@
     "@vitest/coverage-v8": "^4.1.6",
     "@vitest/ui": "^4.1.6",
     "eslint-plugin-react": "^7.37.5",
+    "husky": "^9.1.7",
+    "jsdom": "^29.1.1",
+    "lighthouse": "^12.8.2",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.8.3",
     "vitest": "^4.1.6"
   }

@@ -405,19 +405,19 @@ Before finalizing CONTRIBUTING.md:
 
 **My answers:**
 
-1. Risk tolerance: ******\_\_\_******
-2. Time budget for PRs: ******\_\_\_******
-3. Biggest regret fear: ******\_\_\_******
-4. Timeline for first contribution: ******\_\_\_******
-5. Ideal first contributor: ******\_\_\_******
+1. Risk tolerance: **\*\***\_\_\_**\*\***
+2. Time budget for PRs: **\*\***\_\_\_**\*\***
+3. Biggest regret fear: **\*\***\_\_\_**\*\***
+4. Timeline for first contribution: **\*\***\_\_\_**\*\***
+5. Ideal first contributor: **\*\***\_\_\_**\*\***
 
-**My chosen policy:** ******\_\_\_******
+**My chosen policy:** **\*\***\_\_\_**\*\***
 
 **Decision triggers to reconsider:**
 
-- If ******\_\_\_******, then ******\_\_\_******
-- If ******\_\_\_******, then ******\_\_\_******
-- Review date: ******\_\_\_******
+- If **\*\***\_\_\_**\*\***, then **\*\***\_\_\_**\*\***
+- If **\*\***\_\_\_**\*\***, then **\*\***\_\_\_**\*\***
+- Review date: **\*\***\_\_\_**\*\***
 
 ---
 
