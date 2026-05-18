@@ -34,15 +34,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MoodyBones/goodsomeday.git"
+    "url": "git+https://github.com/MoodyBones/oolong.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MoodyBones/goodsomeday/issues"
+    "url": "https://github.com/MoodyBones/oolong/issues"
   },
-  "homepage": "https://github.com/MoodyBones/goodsomeday#readme",
+  "homepage": "https://github.com/MoodyBones/oolong#readme",
   "dependencies": {
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",

@@ -184,7 +184,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 
 ```bash
 # Clone the repository
-git clone https://github.com/MoodyBones/goodsomeday.git
+git clone https://github.com/MoodyBones/oolong.git
 cd oolong
 
 # Install dependencies
@@ -295,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Visual learner • Frontend developer • Accessibility advocate
 
 - GitHub: [@MoodyBones](https://github.com/MoodyBones)
-- Project: [oolong](https://github.com/MoodyBones/goodsomeday)
+- Project: [oolong](https://github.com/MoodyBones/oolong)
 - LinkedIn: [Connect with me](https://www.linkedin.com/in/mel-jones-4a5835182/)
 - Substack: [@m00dy](https://substack.com/@m00dy)
 
