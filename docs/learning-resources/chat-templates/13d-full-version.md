@@ -1,6 +1,6 @@
 # Daily Activation Prompt: From Values to Action
-trigger program prompt for reference: `docs/learning-resources/chat-templates/00-daily-activation-trigger.md`
----
+
+## trigger program prompt for reference: `docs/learning-resources/chat-templates/00-daily-activation-trigger.md`
 
 ## Morning Ritual (5-10 minutes)
 
@@ -12,7 +12,8 @@ Find a quiet moment. Take three deep breaths. Read these questions slowly, letti
 
 **"What part of this project actually lights me up?"**
 
-*Not what should light you up. What genuinely does. Maybe it's:*
+_Not what should light you up. What genuinely does. Maybe it's:_
+
 - The visual design work?
 - Helping other learners?
 - The feeling of understanding something new?
@@ -20,19 +21,20 @@ Find a quiet moment. Take three deep breaths. Read these questions slowly, letti
 - The fairness and equality aspect?
 - Something else entirely?
 
-*Sit with this. What emotion comes up when you name this?*
+_Sit with this. What emotion comes up when you name this?_
 
 ---
 
-**"If I imagine someone discovering Goodsomeday and it genuinely helps them - what part of their experience would make me feel 'yes, this is why'?"**
+**"If I imagine someone discovering Oolong and it genuinely helps them - what part of their experience would make me feel 'yes, this is why'?"**
 
-*Connect to the human impact, not the technical achievement.*
+_Connect to the human impact, not the technical achievement._
 
 ---
 
 **"What value am I honouring by working on this today?"**
 
-*Is it:*
+_Is it:_
+
 - Fairness (building transparent systems)
 - Growth (expanding your capabilities)
 - Creativity (making beautiful things)
@@ -40,7 +42,7 @@ Find a quiet moment. Take three deep breaths. Read these questions slowly, letti
 - Integrity (finishing what you start)
 - Curiosity (learning how things work)
 
-*Name it. Feel it in your body.*
+_Name it. Feel it in your body._
 
 ---
 
@@ -48,72 +50,76 @@ Find a quiet moment. Take three deep breaths. Read these questions slowly, letti
 
 **"Right now, in this exact moment, what's actually true about my energy and focus?"**
 
-*Not judging it. Just noticing:*
+_Not judging it. Just noticing:_
+
 - Do I feel scattered or focused?
 - Am I energised or tired?
 - Am I curious or resistant?
 - What's my body telling me?
 
-*This information is useful, not shameful.*
+_This information is useful, not shameful._
 
 ---
 
 **"What's pulling my attention away from starting?"**
 
-*Name it without judgment:*
+_Name it without judgment:_
+
 - Fear it won't be perfect?
 - Overwhelm at the size of it all?
 - Excited about planning more?
 - Genuinely low energy?
 - Something else calling you?
 
-*Just noticing. Not fixing yet.*
+_Just noticing. Not fixing yet._
 
 ---
 
 **"If I were my own compassionate mentor right now, what would I notice about what I need?"**
 
-*Maybe:*
+_Maybe:_
+
 - A smaller first step?
 - Permission to work on what excites you today, not what's "next"?
 - Connection to why this matters?
 - To move your body first?
 - To trust your pace?
 
-*Listen to what emerges.*
+_Listen to what emerges._
 
 ---
 
 ### Part 3: Permission and Intuition (Activist Mindset)
 
-**"What do I actually *feel like* working on right now?"**
+**"What do I actually _feel like_ working on right now?"**
 
-*Not what you "should" do. What genuinely pulls you.*
+_Not what you "should" do. What genuinely pulls you._
 
-*This is data, not laziness. Your intuition often knows what you're ready for.*
+_This is data, not laziness. Your intuition often knows what you're ready for._
 
 ---
 
 **"Is there a small part of that thing I could explore right now - just for the next 20 minutes - to see how it feels?"**
 
-*What's a tiny, concrete action that would let you taste this work?*
+_What's a tiny, concrete action that would let you taste this work?_
 
 Examples:
+
 - "Open Figma and play with one colour"
 - "SSH into the VPS and just look around"
 - "Write three sentences about why filtering matters"
 - "Read one section of the n8n docs that sounds interesting"
 - "Ask Claude one question about the thing I'm curious about"
 
-*Not committing to finishing. Just starting to explore.*
+_Not committing to finishing. Just starting to explore._
 
 ---
 
 **"What if I gave myself permission to work on what energises me today, even if it's 'out of order'?"**
 
-*What would I choose?*
+_What would I choose?_
 
-*Reminder: Building momentum matters more than perfect sequence. If you're excited about the theme system but "supposed to" do VPS setup, maybe start with themes. Energy is the scarce resource.*
+_Reminder: Building momentum matters more than perfect sequence. If you're excited about the theme system but "supposed to" do VPS setup, maybe start with themes. Energy is the scarce resource._
 
 ---
 
@@ -121,7 +127,8 @@ Examples:
 
 **"What does my body need right now to feel ready and calm?"**
 
-*Check in:*
+_Check in:_
+
 - Shake out tension? (30 seconds of movement)
 - Three deep breaths?
 - Glass of water?
@@ -129,32 +136,34 @@ Examples:
 - Music on or off?
 - Different location?
 
-*Do it now. Don't skip this.*
+_Do it now. Don't skip this._
 
 ---
 
 **"What's the smallest, most specific next physical action I can take right now?"**
 
-*Not "work on frontend." But:*
+_Not "work on frontend." But:_
+
 - "Open VS Code"
 - "Type `git status` in terminal"
 - "Create a new FigJam board"
 - "Start the timer for 20 minutes"
 - "Open the chat template file"
 
-*So small it's almost silly. That's the point.*
+_So small it's almost silly. That's the point._
 
 ---
 
 **"What would make the next 20 minutes feel like play, not work?"**
 
-*How can you structure this to feel more like exploring than obligating?*
+_How can you structure this to feel more like exploring than obligating?_
+
 - Put on music you love?
 - Pretend you're teaching someone?
 - Treat it like a puzzle to solve?
 - Give yourself permission to stop if it's not engaging?
 
-*Set up the conditions for genuine engagement.*
+_Set up the conditions for genuine engagement._
 
 ---
 
@@ -162,19 +171,19 @@ Examples:
 
 **Take a breath. Read these slowly:**
 
-*"I trust my intuition about what I'm ready for today."*
+_"I trust my intuition about what I'm ready for today."_
 
-*"Starting small is not thinking small - it's thinking smart."*
+_"Starting small is not thinking small - it's thinking smart."_
 
-*"My energy and attention are valuable. I can spend them where they're most alive."*
+_"My energy and attention are valuable. I can spend them where they're most alive."_
 
-*"I'm building a learning system, not just completing tasks. How I work matters as much as what I complete."*
+_"I'm building a learning system, not just completing tasks. How I work matters as much as what I complete."_
 
-*"20 minutes of engaged work beats 3 hours of forcing. I can always do another 20 minutes after this one."*
+_"20 minutes of engaged work beats 3 hours of forcing. I can always do another 20 minutes after this one."_
 
-*"I'm allowed to enjoy this. In fact, enjoyment is data that I'm in my zone of proximal development."*
+_"I'm allowed to enjoy this. In fact, enjoyment is data that I'm in my zone of proximal development."_
 
-*"Whatever I do in the next session - if I'm present and curious - is progress."*
+_"Whatever I do in the next session - if I'm present and curious - is progress."_
 
 ---
 
@@ -182,28 +191,30 @@ Examples:
 
 **"In the next 20 minutes, I will..."**
 
-*Complete this sentence with ONE tiny, concrete action:*
+_Complete this sentence with ONE tiny, concrete action:_
 
 Example:
+
 - "...open the VPS setup chat template and ask one question"
 - "...create three colour variables in Figma"
 - "...read the n8n webhook documentation and take notes on what confuses me"
 - "...update my progress.md with yesterday's reflection"
 - "...write the first acceptance criteria for the ticket I'm curious about"
 
-*Write it down. Set a 20-minute timer.*
+_Write it down. Set a 20-minute timer._
 
 ---
 
 **"After 20 minutes, I will check: Am I engaged? Do I want to continue? Or do I want to stop and celebrate this small win?"**
 
-*Both answers are valid. Trust yourself.*
+_Both answers are valid. Trust yourself._
 
 ---
 
 ### Closing
 
 **"I'm showing up today with:"**
+
 - My value of [name the value from Part 1]
 - Permission to work on [what I'm drawn to]
 - Trust in my [intuition/body/timing]
@@ -218,11 +229,13 @@ Example:
 If you notice yourself spinning or losing focus:
 
 **Quick Check-In:**
+
 1. What's true right now? (tired? distracted? frustrated?)
 2. What do I need? (break? different task? help? food?)
 3. What's the tiniest next step that feels aligned?
 
 **Then either:**
+
 - Do the tiny thing, or
 - Take the break without guilt
 
@@ -233,22 +246,26 @@ If you notice yourself spinning or losing focus:
 ## Science Behind This Approach
 
 **Motivational Interviewing:**
+
 - Open-ended questions create self-persuasion (more powerful than external pressure)
 - Affirmations build self-efficacy
 - Reflective questions surface your own motivations
 
 **Activist Mindset:**
+
 - Agency (you choose what to work on)
 - Purpose (connected to values, not just tasks)
 - Small wins compound into identity change
 
 **Cognitive Science:**
+
 - Specificity beats vagueness ("open VS Code" vs "work on project")
 - Emotional engagement predicts follow-through
 - Body state affects cognitive state (move → calm → focus)
 - Curiosity is more sustainable than discipline
 
 **Arousal Regulation:**
+
 - Name it to tame it (acknowledge what you're feeling)
 - Body-first interventions (breath, movement) shift state
 - Micro-commitments (20 min) reduce activation threat
@@ -281,6 +298,7 @@ But
 **Planning from genuine curiosity is action.**
 
 You'll know the difference by how your body feels:
+
 - Genuine curiosity: energised, focused, time passes quickly
 - Planning-as-avoidance: scattered, anxious, checking the clock
 
@@ -288,5 +306,4 @@ You'll know the difference by how your body feels:
 
 ---
 
-*This prompt adapts to you. Skip questions that don't land. Add your own. The goal is genuine engagement, not perfect adherence.*
-
+_This prompt adapts to you. Skip questions that don't land. Add your own. The goal is genuine engagement, not perfect adherence._

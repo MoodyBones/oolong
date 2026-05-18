@@ -12,13 +12,24 @@ export function Footer() {
         </div>
 
         <div className="flex flex-wrap gap-6 mb-8 text-base">
-          <a href="/about" className="underline hover:text-[#666666]">About</a>
-          <a href="/privacy" className="underline hover:text-[#666666]">Privacy Policy</a>
-          <a href="/contact" className="underline hover:text-[#666666]">Contact</a>
+          <a href="/about" className="underline hover:text-[#666666]">
+            About
+          </a>
+          <a href="/privacy" className="underline hover:text-[#666666]">
+            Privacy Policy
+          </a>
+          <a href="/contact" className="underline hover:text-[#666666]">
+            Contact
+          </a>
         </div>
 
         <div className="text-base text-[#666666]">
-          <p className="mb-2">Questions? <a href="mailto:contact@oolong.dev" className="underline">contact@oolong.dev</a></p>
+          <p className="mb-2">
+            Questions?{' '}
+            <a href="mailto:contact@oolong.dev" className="underline">
+              contact@oolong.dev
+            </a>
+          </p>
           <p>Built by Mel Jones in Melbourne.</p>
         </div>
       </div>

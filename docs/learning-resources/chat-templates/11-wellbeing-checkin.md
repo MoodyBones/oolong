@@ -1,11 +1,13 @@
-I need a well-being check-in for the Goodsomeday learning project.
+I need a well-being check-in for the Oolong learning project.
 
 **Context:**
+
 - Project timeline: 12 days, currently on Day [X]
 - Learning intensity: High (new backend concepts)
 - Progress saved: docs/learning-resources/
 
 **Current state:**
+
 - Energy level: [High / Medium / Low / Burnt out]
 - Motivation: [Excited / Steady / Struggling / Lost]
 - Stress level: [Manageable / Moderate / High / Overwhelmed]
@@ -18,6 +20,7 @@ I need a well-being check-in for the Goodsomeday learning project.
 [Be honest - imposter syndrome? Comparison? Time pressure? Confusion? Isolation?]
 
 **Warning signs I'm noticing:**
+
 - [ ] Procrastinating on learning tasks
 - [ ] Feeling stupid or "not cut out for this"
 - [ ] Comparing myself to others unfavorably
@@ -28,6 +31,7 @@ I need a well-being check-in for the Goodsomeday learning project.
 - [ ] Other: [specify]
 
 **What I need:**
+
 - [ ] Permission to adjust timeline/scope
 - [ ] Reframe of what "progress" means
 - [ ] Celebration of how far I've come

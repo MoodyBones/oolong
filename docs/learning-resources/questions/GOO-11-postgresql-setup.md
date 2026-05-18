@@ -11,8 +11,9 @@
 **Scenario:** You're explaining to a frontend dev friend what you just set up with PostgreSQL.
 
 Without looking, describe the hierarchy:
-1. What's the difference between the PostgreSQL *server*, a *database*, and a *user*?
-2. You created `goodsomeday_user` and `goodsomeday_prod`. Why create a separate user instead of just using the `postgres` superuser?
+
+1. What's the difference between the PostgreSQL _server_, a _database_, and a _user_?
+2. You created `oolong_user` and `oolong_prod`. Why create a separate user instead of just using the `postgres` superuser?
 3. Walk through what happens when n8n connects to PostgreSQL using that credential you saved. What's checking the password? What database does it access?
 4. You ran `GRANT ALL PRIVILEGES ON DATABASE` and then `GRANT ALL ON SCHEMA public`. Why two separate grants? What does each one do?
 
@@ -25,6 +26,7 @@ Without looking, describe the hierarchy:
 **Scenario:** A friend asks, "Why did you set the host to 'localhost' in n8n? Isn't your database on the VPS?"
 
 Explain without looking:
+
 1. Where is PostgreSQL running? Where is n8n running? Why can they use `localhost`?
 2. What port does PostgreSQL listen on by default?
 3. The `lsof` command showed PostgreSQL listening on `localhost:postgresql`. What does that mean for external connections?
@@ -39,6 +41,7 @@ Explain without looking:
 **Scenario:** You wake up and the VPS has crashed. All data is gone. How screwed are you?
 
 Think through the backup strategy:
+
 1. What command creates a PostgreSQL backup? What file does it produce?
 2. The backup file is a `.sql` file. What's actually in there? (Hint: it's not a binary format)
 3. Your backup strategy stores backups on the same VPS. What's the problem with this approach?
@@ -51,11 +54,13 @@ Think through the backup strategy:
 ## Self-Assessment
 
 After answering, rate yourself:
+
 - ✅ **Confident:** Could explain to someone else
 - 🤔 **Partial:** Got the concept but missed details
 - ❌ **Unclear:** Need to review the material
 
 **Review schedule:**
+
 - First review: Tomorrow (24 hours)
 - Second review: 3 days after completion
 - Third review: 1 week after completion
@@ -67,17 +72,14 @@ After answering, rate yourself:
 
 Use this space to write down what you learned from attempting these questions:
 
-**What I understood well:**
--
+## **What I understood well:**
 
-**What I need to review:**
--
+## **What I need to review:**
 
-**Resources to check:**
--
+## **Resources to check:**
 
 ---
 
-*Created: 2025-10-18*
-*Ticket: GOO-11 - Set up PostgreSQL database*
-*Related docs: foundation.md, BACKUP-STRATEGY.md*
+_Created: 2025-10-18_
+_Ticket: GOO-11 - Set up PostgreSQL database_
+_Related docs: foundation.md, BACKUP-STRATEGY.md_

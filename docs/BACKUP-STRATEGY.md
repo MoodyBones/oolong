@@ -1,8 +1,8 @@
-# Goodsomeday Backup Strategy
+# Oolong Backup Strategy
 
 ## Database: PostgreSQL
 
-**Database:** `goodsomeday_prod`
+**Database:** `oolong_prod`
 **Location:** VPS at 72.60.78.175
 **Version:** PostgreSQL 16.10
 
@@ -15,15 +15,15 @@
 SSH into the VPS and run:
 
 ```bash
-sudo -u postgres pg_dump goodsomeday_prod > ~/backups/goodsomeday_prod_$(date +%Y%m%d_%H%M%S).sql
+sudo -u postgres pg_dump oolong_prod > ~/backups/oolong_prod_$(date +%Y%m%d_%H%M%S).sql
 ```
 
-This creates a SQL dump file with timestamp (e.g., `goodsomeday_prod_20251018_235959.sql`)
+This creates a SQL dump file with timestamp (e.g., `oolong_prod_20251018_235959.sql`)
 
 ### Restore from backup
 
 ```bash
-sudo -u postgres psql goodsomeday_prod < ~/backups/goodsomeday_prod_YYYYMMDD_HHMMSS.sql
+sudo -u postgres psql oolong_prod < ~/backups/oolong_prod_YYYYMMDD_HHMMSS.sql
 ```
 
 Replace `YYYYMMDD_HHMMSS` with your backup filename.
@@ -44,7 +44,7 @@ Create a cron job to run daily backups:
 crontab -e
 
 # Add this line (runs daily at 2 AM):
-0 2 * * * sudo -u postgres pg_dump goodsomeday_prod > ~/backups/goodsomeday_prod_$(date +\%Y\%m\%d).sql
+0 2 * * * sudo -u postgres pg_dump oolong_prod > ~/backups/oolong_prod_$(date +\%Y\%m\%d).sql
 ```
 
 ---
@@ -52,6 +52,7 @@ crontab -e
 ## Backup Retention
 
 **Recommended:**
+
 - Keep daily backups for 7 days
 - Keep weekly backups for 4 weeks
 - Keep monthly backups for 6 months
@@ -72,22 +73,25 @@ crontab -e
 ## Quick Reference
 
 **Create backup:**
+
 ```bash
 mkdir -p ~/backups
-sudo -u postgres pg_dump goodsomeday_prod > ~/backups/backup_$(date +%Y%m%d).sql
+sudo -u postgres pg_dump oolong_prod > ~/backups/backup_$(date +%Y%m%d).sql
 ```
 
 **List backups:**
+
 ```bash
 ls -lh ~/backups/
 ```
 
 **Restore backup:**
+
 ```bash
-sudo -u postgres psql goodsomeday_prod < ~/backups/backup_YYYYMMDD.sql
+sudo -u postgres psql oolong_prod < ~/backups/backup_YYYYMMDD.sql
 ```
 
 ---
 
-*Last updated: 2025-10-18*
-*Related: GOO-11 - Set up PostgreSQL database*
+_Last updated: 2025-10-18_
+_Related: GOO-11 - Set up PostgreSQL database_

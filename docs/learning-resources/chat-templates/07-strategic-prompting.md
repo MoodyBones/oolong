@@ -1,6 +1,7 @@
-I need coaching on strategic prompting for the Goodsomeday project - specifically for Claude Code (development) and Claude API (release notes automation).
+I need coaching on strategic prompting for the Oolong project - specifically for Claude Code (development) and Claude API (release notes automation).
 
 **Context:**
+
 - Project: Full-stack learning (Next.js, n8n, PostgreSQL)
 - Saved details: docs/learning-resources/chat-day1-foundation.md
 - Using Claude Code for: Frontend components (Days 4-12)
@@ -10,6 +11,7 @@ I need coaching on strategic prompting for the Goodsomeday project - specificall
 [Describe how you currently prompt, or "I haven't started yet"]
 
 **What I need help with:**
+
 1. **Effective prompt structure** for Claude Code
    - How specific should I be?
    - When to reference existing code vs start fresh?

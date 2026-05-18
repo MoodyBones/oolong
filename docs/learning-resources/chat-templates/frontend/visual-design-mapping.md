@@ -1,4 +1,5 @@
 # Figma Design → Code Mapping
+
 **Visual Guide to Implementation**
 
 ---
@@ -97,6 +98,7 @@ MOBILE:
 ### 1. StoryCard (CRITICAL - Main Content)
 
 **Visual appearance:**
+
 ```
 ┌────────────────────────────────────────┐
 │ ┌──────────────┐                       │
@@ -115,6 +117,7 @@ MOBILE:
 ```
 
 **Key specs:**
+
 - Background: White (#FFFFFF)
 - Border radius: 12px
 - **NO shadows** (different from default shadcn Card)
@@ -125,6 +128,7 @@ MOBILE:
 - Timestamp: subtle grey, right-aligned
 
 **Layout in feed:**
+
 - **Vertical stack** (not grid!)
 - Gap: 24px between cards
 - Full width of content area
@@ -134,6 +138,7 @@ MOBILE:
 ### 2. Sidebar Filters (Desktop Only)
 
 **Visual appearance:**
+
 ```
 ┌──────────────────────┐
 │ Focus area           │ ← Yellow bg when expanded
@@ -154,6 +159,7 @@ MOBILE:
 ```
 
 **Key specs:**
+
 - Width: 240px (fixed)
 - Sticky positioning (stays on scroll)
 - Headers: Yellow background (#F9D762) when open
@@ -162,6 +168,7 @@ MOBILE:
 - Collapsible (accordions)
 
 **Mobile behavior:**
+
 - Becomes stacked above cards
 - All sections closed by default
 - Full width
@@ -172,6 +179,7 @@ MOBILE:
 ### 3. Hero Section
 
 **Visual appearance:**
+
 ```
 ┌─────────────────────────────────────────┐
 │         (Golden Yellow Background)       │
@@ -194,6 +202,7 @@ MOBILE:
 ```
 
 **Key specs:**
+
 - Background: Golden yellow (#F9D762)
 - Heading: 72px, bold, black text
 - Subheading: 28px
@@ -206,13 +215,15 @@ MOBILE:
 ### 4. Badge (Pipeline Stages)
 
 **Visual appearance:**
+
 ```
 High School  → Blue background
-University   → Purple background  
+University   → Purple background
 Mid Career   → Green background
 ```
 
 **Key specs:**
+
 - Pill shape (fully rounded)
 - Padding: 6px 12px
 - Font size: 14px
@@ -226,6 +237,7 @@ Mid Career   → Green background
 ### 5. Header
 
 **Visual appearance:**
+
 ```
 ┌─────────────────────────────────────────┐
 │ ⊕ GOODSOMEDAY    Submit Story | FAQ | 🔍│
@@ -233,6 +245,7 @@ Mid Career   → Green background
 ```
 
 **Key specs:**
+
 - Background: Black (#000000)
 - Height: 80px
 - Logo: White text, left side
@@ -245,14 +258,16 @@ Mid Career   → Green background
 ### 6. Footer
 
 **Visual appearance:**
+
 ```
 ┌─────────────────────────────────────────┐
-│ © 2025 Goodsomeday                  🌙  │
+│ © 2025 Oolong                  🌙  │
 │ Built with purpose                      │
 └─────────────────────────────────────────┘
 ```
 
 **Key specs:**
+
 - Background: Black (#000000)
 - Text: White
 - Height: 120px
@@ -264,18 +279,21 @@ Mid Career   → Green background
 ## 🎯 Implementation Priority
 
 ### Phase 1: Core Display (Hour 1-2)
+
 1. ✅ StoryCard component (most important!)
 2. ✅ Mock data structure
 3. ✅ StoryFeed (vertical stack layout)
 4. ✅ Badge component
 
 ### Phase 2: Layout (Hour 2-3)
+
 5. ✅ Hero section
 6. ✅ Header
 7. ✅ Footer
 8. ✅ Responsive layout structure
 
 ### Phase 3: Interactive (Hour 3+)
+
 9. ✅ Sidebar filters (desktop)
 10. ✅ Stacked filters (mobile)
 11. ✅ Theme toggle
@@ -286,17 +304,20 @@ Mid Career   → Green background
 ## 🔄 Responsive Breakpoints
 
 ### Mobile (< 768px)
+
 - Single column layout
 - Filters stacked above cards (closed)
 - Hero text smaller
 - Full-width elements
 
 ### Tablet (768px - 1024px)
+
 - Same as mobile OR sidebar appears (your choice)
 - Larger touch targets
 - Better use of horizontal space
 
 ### Desktop (1024px+)
+
 - Sidebar + content two-column
 - Max content width: 1200px
 - Sidebar: 240px fixed
@@ -309,11 +330,13 @@ Mid Career   → Green background
 **Figma Make generated code that needs refactoring:**
 
 ❌ **Inline styles**
+
 ```typescript
 <div style={{ backgroundColor: '#F9D762', padding: '80px' }}>
 ```
 
 ✅ **Use instead**
+
 ```typescript
 <div className="bg-secondary py-2xl">
 ```
@@ -321,11 +344,13 @@ Mid Career   → Green background
 ---
 
 ❌ **Absolute positioning**
+
 ```typescript
 <div style={{ position: 'absolute', top: '120px', left: '24px' }}>
 ```
 
 ✅ **Use instead**
+
 ```typescript
 <div className="flex flex-col gap-lg">
 ```
@@ -333,11 +358,13 @@ Mid Career   → Green background
 ---
 
 ❌ **Fixed widths**
+
 ```typescript
 <div style={{ width: '375px' }}>
 ```
 
 ✅ **Use instead**
+
 ```typescript
 <div className="w-full max-w-md">
 ```
@@ -345,11 +372,13 @@ Mid Career   → Green background
 ---
 
 ❌ **Non-semantic HTML**
+
 ```typescript
 <div><div><div>Title</div></div></div>
 ```
 
 ✅ **Use instead**
+
 ```typescript
 <header><h1>Title</h1></header>
 ```
@@ -359,6 +388,7 @@ Mid Career   → Green background
 ## 📏 Measurements Reference
 
 ### Heights
+
 - Header: 80px
 - Hero: Variable (min 60vh)
 - Image divider: 200px
@@ -368,18 +398,21 @@ Mid Career   → Green background
 - Button (hero): 80px
 
 ### Widths
+
 - Max content: 1200px
 - Sidebar: 240px (desktop)
 - Main content: max 840px
 - Cards: 100% of container
 
 ### Spacing
+
 - Between sections: 48px (2xl)
 - Between cards: 24px (lg)
 - Card padding: 24px (lg)
 - List items: 16px (md)
 
 ### Font Sizes
+
 - H1 (Hero): 72px (text-7xl)
 - H2 (Section): 48px (text-5xl)
 - H3 (Sidebar): 18px (text-lg)
@@ -392,12 +425,14 @@ Mid Career   → Green background
 ## 🎨 Color Usage Guide
 
 **Golden Yellow (#F9D762) appears in:**
+
 - Hero background (full section)
 - Sidebar headers (when expanded)
 - Sidebar borders (when open)
 - Active filter indicators
 
 **Black (#000000) appears in:**
+
 - Header background
 - Footer background
 - Primary text
@@ -405,6 +440,7 @@ Mid Career   → Green background
 - Button borders (outline style)
 
 **White (#FFFFFF) appears in:**
+
 - Story card backgrounds
 - Main content background
 - Header text
@@ -412,6 +448,7 @@ Mid Career   → Green background
 - Tag/badge backgrounds
 
 **Grey (#F5F5F5) appears in:**
+
 - ~~Story cards~~ NO! Cards are white
 - Subtle backgrounds (if needed)
 - Borders (#E0E0E0)
@@ -423,26 +460,31 @@ Mid Career   → Green background
 Before calling a component "done":
 
 **Spacing**
+
 - [ ] Follows 8px system
 - [ ] Generous padding (not cramped)
 - [ ] Consistent gaps
 
 **Colors**
+
 - [ ] Uses theme tokens (not hardcoded)
 - [ ] Works in dark mode
 - [ ] Proper contrast (WCAG AA)
 
 **Typography**
+
 - [ ] Clear hierarchy
 - [ ] Readable line-height (1.5)
 - [ ] Proper font weights
 
 **Layout**
+
 - [ ] Responsive breakpoints work
 - [ ] No horizontal scroll on mobile
 - [ ] Proper alignment
 
 **Components**
+
 - [ ] Match Figma visual design
 - [ ] Hover states work
 - [ ] Focus states visible

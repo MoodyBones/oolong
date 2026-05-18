@@ -1,5 +1,6 @@
 # Quick Reference - Corrected
-**Goodsomeday Frontend Build**
+
+**Oolong Frontend Build**
 
 ---
 
@@ -12,7 +13,9 @@ A career story platform homepage that matches your Figma design using Next.js, T
 ## 📱 Actual Design (From Your Figma Make Chat)
 
 ### Layout Structure
+
 **Desktop:**
+
 - Black header (80px height)
 - Golden yellow hero (full-width)
 - Full-width image divider (200px)
@@ -23,6 +26,7 @@ A career story platform homepage that matches your Figma design using Next.js, T
   - Right: Story cards (max 840px, **VERTICAL STACK** not grid!)
 
 **Mobile:**
+
 - Same header, hero, image divider
 - Search bar full-width
 - Filters stacked above cards (accordions closed by default)
@@ -31,6 +35,7 @@ A career story platform homepage that matches your Figma design using Next.js, T
 ### Key Components
 
 **1. StoryCard**
+
 - White background (#FFFFFF)
 - 12px border radius
 - **NO shadows** (important!)
@@ -40,6 +45,7 @@ A career story platform homepage that matches your Figma design using Next.js, T
 - Cards stack **vertically** with 24px gap
 
 **2. Sidebar Filters**
+
 - Yellow background headers (#F9D762) when section visible
 - Three sections: Focus area, Story themes, Industry
 - Collapsible (accordions)
@@ -48,6 +54,7 @@ A career story platform homepage that matches your Figma design using Next.js, T
 - Mobile: stacked above cards, closed by default
 
 **3. Hero**
+
 - Golden yellow background (#F9D762)
 - Large heading (72px)
 - Subheading (28px)
@@ -55,12 +62,14 @@ A career story platform homepage that matches your Figma design using Next.js, T
 - Full-width button style (increased size)
 
 **4. Header**
+
 - Black background
 - Logo left, navigation right
 - Search icon
 - Mobile: hamburger menu
 
 **5. Footer**
+
 - Black background
 - Theme toggle on right side
 - Copyright, tagline
@@ -70,17 +79,19 @@ A career story platform homepage that matches your Figma design using Next.js, T
 ## 🎨 Design System
 
 ### Colors
+
 ```typescript
-primary: "#000000"      // Black
-secondary: "#F9D762"    // Golden yellow
-background: "#FFFFFF"   // White
-surface: "#F5F5F5"      // Grey
+primary: '#000000'; // Black
+secondary: '#F9D762'; // Golden yellow
+background: '#FFFFFF'; // White
+surface: '#F5F5F5'; // Grey
 ```
 
 ### Spacing (8px base)
+
 ```
 xs: 4px
-sm: 8px  
+sm: 8px
 md: 16px
 lg: 24px
 xl: 32px
@@ -88,6 +99,7 @@ xl: 32px
 ```
 
 ### Typography
+
 ```
 H1 (Hero): 72px
 H2 (Featured stories): 48px
@@ -101,6 +113,7 @@ Body: 16px (1.5 line-height)
 ## 🚫 Common Mistakes to Avoid
 
 ❌ **DON'T:**
+
 - Make story cards a grid (they're vertical stack!)
 - Add shadows to cards (design has none)
 - Make sidebar filters visible on mobile (should be stacked accordions)
@@ -109,6 +122,7 @@ Body: 16px (1.5 line-height)
 - Make accordions open by default on mobile (closed by default)
 
 ✅ **DO:**
+
 - Stack story cards vertically with 24px gap
 - Use white background cards with no shadows
 - Hide sidebar on mobile, show stacked filters
@@ -122,11 +136,11 @@ Body: 16px (1.5 line-height)
 
 ```typescript
 interface Story {
-  id: number
-  pipelineStage: "High School" | "University" | "Mid Career"
-  storyText: string
-  createdAt: string
-  approved: boolean
+  id: number;
+  pipelineStage: 'High School' | 'University' | 'Mid Career';
+  storyText: string;
+  createdAt: string;
+  approved: boolean;
 }
 
 // Use 3-4 stories with realistic content
@@ -138,13 +152,15 @@ interface Story {
 ## 🎯 3-Hour Session Plan
 
 ### Hour 1: Foundation
+
 - Create Next.js project
-- Install shadcn/ui  
+- Install shadcn/ui
 - Configure colors in Tailwind
 - Set up theme toggle
 - **Output:** Dev server running, theme toggle works
 
 ### Hour 2: Components
+
 - Create mock data
 - Build StoryCard (white bg, no shadows, vertical)
 - Build Badge with pipeline stage colors
@@ -152,6 +168,7 @@ interface Story {
 - **Output:** Cards displaying from mock data
 
 ### Hour 3: Layout
+
 - Build Hero (yellow, outline button)
 - Build Header (black, nav right)
 - Build Footer (black, theme toggle)
@@ -173,6 +190,7 @@ interface Story {
 ## ✅ Definition of Done
 
 You're successful today if:
+
 1. ✅ App runs on localhost:3000
 2. ✅ Theme toggle works (light/dark)
 3. ✅ Story cards display in **vertical stack** from mock data
@@ -185,6 +203,7 @@ You're successful today if:
 ## 📝 Key Design Decisions You'll Make
 
 As you build, decide:
+
 - Badge styling approach (variants vs inline)
 - Text truncation (how many lines?)
 - Filter state management
@@ -199,19 +218,19 @@ As you build, decide:
 ## 🚀 Start Command
 
 ```bash
-npx create-next-app@latest goodsomeday-frontend
+npx create-next-app@latest oolong-frontend
 # TypeScript: Yes
-# Tailwind: Yes  
+# Tailwind: Yes
 # App Router: Yes
 ```
 
-Then use the [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md) to give context.
+Then use the [Claude Code Setup Prompt](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md) to give context.
 
 ---
 
 ## 📚 Your Documents
 
-1. **[Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-goodsomeday.md)** - Paste at start of Claude Code session
+1. **[Claude Code Setup](computer:///mnt/user-data/outputs/claude-code-setup-oolong.md)** - Paste at start of Claude Code session
 2. **[Strategic Build Plan](computer:///mnt/user-data/outputs/strategic-build-plan.md)** - High-level approach, no prescriptive details
 3. **This Quick Reference** - Essential facts, corrected from Figma
 

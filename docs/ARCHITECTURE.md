@@ -1,6 +1,6 @@
-# Goodsomeday System Architecture
+# Oolong System Architecture
 
-**Project:** Goodsomeday - Career transformation story platform
+**Project:** Oolong - Career transformation story platform
 **Last Updated:** 19 October 2025
 **Status:** MVP Development (Pre-launch)
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-Goodsomeday is a full-stack web application built with a visual-first, AI-assisted development approach. The platform enables users to share structured transformation stories about barriers they faced in tech careers and the actions they took to create change.
+Oolong is a full-stack web application built with a visual-first, AI-assisted development approach. The platform enables users to share structured transformation stories about barriers they faced in tech careers and the actions they took to create change.
 
 **Core Philosophy:** Use modern tools that match how the developer thinks, rather than forcing traditional backend development patterns.
 
@@ -40,7 +40,7 @@ Goodsomeday is a full-stack web application built with a visual-first, AI-assist
 │  ┌───────────────────────────────────────────────────────┐  │
 │  │                   Nginx (Reverse Proxy)               │  │
 │  │  • SSL/TLS (Let's Encrypt)                            │  │
-│  │  • Routes n8n.goodsomeday.com → localhost:5678       │  │
+│  │  • Routes n8n.oolong.com → localhost:5678       │  │
 │  └────────────────────┬──────────────────────────────────┘  │
 │                       │                                      │
 │  ┌────────────────────▼──────────────────────────────────┐  │
@@ -71,7 +71,7 @@ Goodsomeday is a full-stack web application built with a visual-first, AI-assist
 
 **Technology:** Next.js 14 with App Router
 **Hosting:** Vercel (auto-deploy from main branch)
-**Deployment URL:** https://goodsomeday.vercel.app
+**Deployment URL:** https://oolong.vercel.app
 
 **Key Components:**
 
@@ -93,11 +93,13 @@ Goodsomeday is a full-stack web application built with a visual-first, AI-assist
    - Spam detection tools
 
 **State Management:**
+
 - React Context for theme (ThemeProvider)
 - Local state for forms
 - No global state library (keeping it simple for MVP)
 
 **Styling:**
+
 - Tailwind CSS utility classes
 - Custom design system (accessible colors, typography)
 - Responsive design (mobile-first)
@@ -108,9 +110,10 @@ Goodsomeday is a full-stack web application built with a visual-first, AI-assist
 
 **Technology:** n8n (visual workflow automation)
 **Hosting:** Self-hosted on Hostinger VPS
-**Access URL:** https://n8n.goodsomeday.com
+**Access URL:** https://n8n.oolong.com
 
 **Why n8n?**
+
 - Visual learner-friendly (drag-and-drop logic)
 - No need to hand-code Express.js APIs
 - Built-in database nodes (no manual SQL)
@@ -147,6 +150,7 @@ Goodsomeday is a full-stack web application built with a visual-first, AI-assist
    - Inserts into learning_journal table
 
 **Process Management:**
+
 - PM2 keeps n8n running
 - Systemd service (pm2-mel.service)
 - Auto-restart on crashes
@@ -160,13 +164,14 @@ Goodsomeday is a full-stack web application built with a visual-first, AI-assist
 **Purpose:** Route HTTPS traffic to n8n
 
 **Configuration:**
+
 ```nginx
 server {
     listen 443 ssl;
-    server_name n8n.goodsomeday.com;
+    server_name n8n.oolong.com;
 
-    ssl_certificate /etc/letsencrypt/live/n8n.goodsomeday.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/n8n.goodsomeday.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/n8n.oolong.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/n8n.oolong.com/privkey.pem;
 
     location / {
         proxy_pass http://localhost:5678;
@@ -177,6 +182,7 @@ server {
 ```
 
 **SSL/TLS:**
+
 - Let's Encrypt certificates (free)
 - Auto-renewal via Certbot
 - HTTPS enforced (HTTP redirects to HTTPS)
@@ -188,12 +194,13 @@ server {
 **Technology:** PostgreSQL 16
 **Hosting:** Co-located on VPS (localhost connection)
 
-**Database:** `goodsomeday_prod`
-**User:** `goodsomeday_user` (restricted permissions)
+**Database:** `oolong_prod`
+**User:** `oolong_user` (restricted permissions)
 
 **Tables:**
 
 1. **stories**
+
    ```sql
    - id (SERIAL PRIMARY KEY)
    - story_text (TEXT, 100-5000 chars)
@@ -217,14 +224,17 @@ server {
    ```
 
 **Indexes:**
+
 - `idx_stories_approved` (partial, WHERE approved=TRUE)
 - `idx_stories_pipeline_stage`
 - `idx_stories_submitted_at` (DESC)
 
 **Triggers:**
+
 - Auto-update `updated_at` on row changes
 
 **Backups:**
+
 - Manual pg_dump (documented in BACKUP-STRATEGY.md)
 - Future: Automated daily backups via cron
 
@@ -237,6 +247,7 @@ server {
 **Access:** SSH key authentication (password auth disabled)
 
 **Security Measures:**
+
 1. Non-root user (mel) with sudo privileges
 2. SSH key-only authentication
 3. UFW firewall (ports 22, 80, 443 only)
@@ -244,6 +255,7 @@ server {
 5. Principle of least privilege (database user permissions)
 
 **Services Running:**
+
 - Nginx (reverse proxy)
 - n8n (via PM2)
 - PostgreSQL
@@ -260,7 +272,7 @@ server {
    ↓
 2. Client validates input (character count, required fields)
    ↓
-3. POST request to https://n8n.goodsomeday.com/webhook/submit-story
+3. POST request to https://n8n.oolong.com/webhook/submit-story
    ↓
 4. Nginx forwards to n8n on localhost:5678
    ↓
@@ -278,7 +290,7 @@ server {
 ```
 1. User visits story feed (Frontend)
    ↓
-2. GET request to https://n8n.goodsomeday.com/webhook/get-stories?pipeline_stage=student
+2. GET request to https://n8n.oolong.com/webhook/get-stories?pipeline_stage=student
    ↓
 3. n8n workflow queries PostgreSQL WHERE approved=TRUE
    ↓
@@ -324,6 +336,7 @@ server {
 ### AI-Assisted Development
 
 **Tools Used:**
+
 1. **Claude Code** - Component generation, code review
 2. **Claude API** - Automated release notes (future)
 3. **Figma MCP** - Design-to-code (future goal)
@@ -337,30 +350,34 @@ server {
 ### Frontend (Vercel)
 
 **Automatic:**
+
 - Push to main → Auto-deploy
 - Preview deployments for PRs
 - Environment variables in Vercel dashboard
 
 **Environment Variables:**
+
 ```
-NEXT_PUBLIC_API_URL=https://n8n.goodsomeday.com/webhook
+NEXT_PUBLIC_API_URL=https://n8n.oolong.com/webhook
 ```
 
 ### Backend (VPS)
 
 **Manual Process:**
+
 1. SSH into VPS: `ssh mel@your-vps-ip`
-2. Access n8n UI: https://n8n.goodsomeday.com
+2. Access n8n UI: https://n8n.oolong.com
 3. Update workflows via visual editor
 4. Test with curl or Postman
 5. Workflows auto-save (no restart needed)
 
 **Database Migrations:**
+
 1. Write SQL in `docs/database/migrations/`
 2. Test locally (optional)
 3. SSH to VPS and run:
    ```bash
-   sudo -u postgres psql goodsomeday_prod < migration.sql
+   sudo -u postgres psql oolong_prod < migration.sql
    ```
 4. Document in changelog
 
@@ -369,12 +386,14 @@ NEXT_PUBLIC_API_URL=https://n8n.goodsomeday.com/webhook
 ## Monitoring & Observability
 
 **Current State (MVP):**
+
 - PM2 logs for n8n: `pm2 logs n8n`
 - PostgreSQL logs: `/var/log/postgresql/`
 - Nginx logs: `/var/log/nginx/`
 - Manual monitoring (no alerting yet)
 
 **Future:**
+
 - Error tracking (Sentry or similar)
 - Uptime monitoring (UptimeRobot)
 - Performance metrics (response times)
@@ -400,7 +419,7 @@ NEXT_PUBLIC_API_URL=https://n8n.goodsomeday.com/webhook
    - Password authentication disabled
 
 4. **Database Security**
-   - Separate user (goodsomeday_user) with limited permissions
+   - Separate user (oolong_user) with limited permissions
    - No remote connections (localhost only)
    - Input validation via n8n (SQL injection protection)
 
@@ -424,6 +443,7 @@ NEXT_PUBLIC_API_URL=https://n8n.goodsomeday.com/webhook
 **Current Capacity:** Small-scale MVP (hundreds of stories)
 
 **Bottlenecks:**
+
 1. Single VPS (no horizontal scaling)
 2. PostgreSQL on same server as n8n
 3. No caching layer
@@ -431,14 +451,17 @@ NEXT_PUBLIC_API_URL=https://n8n.goodsomeday.com/webhook
 **Future Scaling Path:**
 
 **Phase 1: Vertical Scaling**
+
 - Upgrade VPS resources (more CPU/RAM)
 - Add PostgreSQL connection pooling
 
 **Phase 2: Caching**
+
 - Redis for approved stories (reduce DB load)
 - CDN for static assets
 
 **Phase 3: Horizontal Scaling**
+
 - Separate database server
 - Load balancer + multiple n8n instances
 - Read replicas for PostgreSQL
@@ -450,30 +473,35 @@ NEXT_PUBLIC_API_URL=https://n8n.goodsomeday.com/webhook
 ## Technology Choices Rationale
 
 ### Why Next.js?
+
 - Modern React framework with great DX
 - App Router for better performance
 - Vercel deployment (zero config)
 - Strong TypeScript support
 
 ### Why n8n?
+
 - **Visual-first approach** matches developer's learning style
 - No need to hand-code Express.js boilerplate
 - Self-hosted = full control and no vendor lock-in
 - Easy to modify workflows without code changes
 
 ### Why PostgreSQL?
+
 - Robust, mature, open-source
 - Strong data integrity (constraints, triggers)
 - n8n has excellent PostgreSQL integration
 - Skills transferable to other projects
 
 ### Why Vercel?
+
 - Best Next.js deployment experience
 - Auto-preview deployments
 - Free tier suitable for MVP
 - Global CDN
 
 ### Why Hostinger?
+
 - Affordable VPS pricing
 - Good performance
 - Simple management interface

@@ -14,6 +14,6 @@ Next up is PostgreSQL and then I get to actually BUILD workflows in n8n instead 
 
 —
 
-**One learning:** Reverse proxies are like receptionists. They answer the door (port 443), check who you're here to see (n8n.goodsomeday.com), and direct you to the right office (localhost:5678). Internal services don't deal with the public directly.
+**One learning:** Reverse proxies are like receptionists. They answer the door (port 443), check who you're here to see (n8n.oolong.com), and direct you to the right office (localhost:5678). Internal services don't deal with the public directly.
 
 **One struggle:** PM2 systemd service kept showing "inactive" even though n8n was running. Turns out PM2 can run in user session OR as a system service, not both. Had to `pm2 kill` the user session and let systemd take over. That conflict took a while to understand.

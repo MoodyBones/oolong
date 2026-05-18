@@ -52,12 +52,14 @@ Confirm you've read these docs and understand my approach before we proceed.
 ## Why This Matters
 
 **Without context, Claude Code will:**
+
 - Assume you want traditional learning (explain every step)
 - Suggest hand-coded solutions instead of using your tools
 - Jump to execution before understanding what's already done
 - Miss that you're building in public with learning docs
 
 **With context, Claude Code will:**
+
 - Check commit history first
 - Use your tools (n8n, Claude Code generated components)
 - Focus on product/learning documentation
@@ -82,6 +84,7 @@ If Claude says/does any of these, STOP and re-share context:
 ## Example: Good vs Bad Claude Responses
 
 ### BAD (No Context):
+
 ```
 User: "Help me with GOO-12"
 Claude: "Sure! Let me teach you about database schema design.
@@ -89,6 +92,7 @@ First, let's understand what a primary key is..."
 ```
 
 ### GOOD (Has Context):
+
 ```
 User: "Help me with GOO-12"
 Claude: "Let me first check your commit history and foundation.md.
@@ -107,6 +111,6 @@ What's left: execute on VPS, create learning docs. Let me help with that."
 
 ---
 
-*Created: 2025-10-20*
-*Use this at the START of EVERY Claude Code session*
-*Saves 30+ minutes of context correction per session*
+_Created: 2025-10-20_
+_Use this at the START of EVERY Claude Code session_
+_Saves 30+ minutes of context correction per session_

@@ -11,6 +11,7 @@
 **Scenario:** A friend asks, "Why did you disable root login AND password authentication? Isn't one enough?"
 
 Walk through your reasoning:
+
 1. What specific threat does disabling root login prevent?
 2. What different threat does disabling password authentication prevent?
 3. How do these two measures work together to create defense-in-depth?
@@ -25,6 +26,7 @@ Walk through your reasoning:
 **Scenario:** You need to explain to a non-technical stakeholder how UFW protects your server.
 
 Without looking at documentation:
+
 1. Draw (or describe) the default UFW policy you set up. What's allowed in? What's allowed out?
 2. You opened ports 22, 80, and 443. For each port, explain:
    - What service uses it?
@@ -41,6 +43,7 @@ Without looking at documentation:
 **Scenario:** You're teaching someone how SSH key authentication works using a real-world analogy.
 
 Explain without looking:
+
 1. Where does your private key live? Where does your public key live?
 2. Why can't someone else connect to your server even if they know your username?
 3. Walk through what happens step-by-step when you run `ssh mel@72.60.78.175`
@@ -53,11 +56,13 @@ Explain without looking:
 ## Self-Assessment
 
 After answering, rate yourself:
+
 - ✅ **Confident:** Could explain to someone else
 - 🤔 **Partial:** Got the concept but missed details
 - ❌ **Unclear:** Need to review the material
 
 **Review schedule:**
+
 - First review: Tomorrow (24 hours)
 - Second review: 3 days after completion
 - Third review: 1 week after completion
@@ -69,17 +74,14 @@ After answering, rate yourself:
 
 Use this space to write down what you learned from attempting these questions:
 
-**What I understood well:**
--
+## **What I understood well:**
 
-**What I need to review:**
--
+## **What I need to review:**
 
-**Resources to check:**
--
+## **Resources to check:**
 
 ---
 
-*Created: [Date]*
-*Ticket: GOO-9 - Provision and secure VPS*
-*Related docs: foundation.md, VPS setup guide*
+_Created: [Date]_
+_Ticket: GOO-9 - Provision and secure VPS_
+_Related docs: foundation.md, VPS setup guide_

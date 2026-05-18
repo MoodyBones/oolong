@@ -1,15 +1,16 @@
-# Goodsomeday API Documentation
+# Oolong API Documentation
 
 **Backend:** n8n workflows hosted on VPS
-**Base URL:** `https://n8n.goodsomeday.com/webhook`
+**Base URL:** `https://n8n.oolong.com/webhook`
 
 ---
 
 ## Overview
 
-The Goodsomeday backend is built with n8n (visual workflow automation) rather than traditional REST APIs. All endpoints are n8n webhook workflows that handle data validation, database operations, and business logic through drag-and-drop nodes.
+The Oolong backend is built with n8n (visual workflow automation) rather than traditional REST APIs. All endpoints are n8n webhook workflows that handle data validation, database operations, and business logic through drag-and-drop nodes.
 
 **Why n8n?**
+
 - Visual workflow design matches how the developer thinks
 - Built-in PostgreSQL nodes eliminate hand-coded queries
 - Easy to modify logic without touching server code
@@ -26,6 +27,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Purpose:** Submit a new transformation story for moderation
 
 **Request Body:**
+
 ```json
 {
   "story_text": "string (100-5000 characters)",
@@ -35,12 +37,14 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Validation Rules:**
+
 - `story_text`: Required, 100-5000 characters
 - `pipeline_stage`: Required, must be one of the three values
 - `current_status`: Optional (nullable)
 - IP address captured automatically for spam prevention
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -50,6 +54,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "success": false,
@@ -58,6 +63,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Database Operation:**
+
 - Inserts into `stories` table with `approved = FALSE`
 - Captures `ip_address` and `submitted_at` timestamp
 - Auto-generates `id` (serial primary key)
@@ -71,6 +77,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Purpose:** Retrieve approved stories for public display
 
 **Query Parameters:**
+
 ```
 ?pipeline_stage=student     (optional - filter by stage)
 &limit=20                   (optional - default 20, max 100)
@@ -78,6 +85,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -97,6 +105,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Database Operation:**
+
 - Selects from `stories` WHERE `approved = TRUE`
 - Orders by `submitted_at DESC`
 - Filters by `pipeline_stage` if provided
@@ -114,6 +123,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Authentication:** TBD (future implementation)
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -131,6 +141,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Database Operation:**
+
 - Selects from `stories` WHERE `approved = FALSE`
 - Orders by `submitted_at ASC` (oldest first)
 - Includes `ip_address` for spam detection
@@ -146,6 +157,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Authentication:** TBD (future implementation)
 
 **Request Body:**
+
 ```json
 {
   "id": 43,
@@ -154,6 +166,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -163,6 +176,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Database Operation:**
+
 - Updates `stories` SET `approved = ?, moderated_at = NOW()` WHERE `id = ?`
 
 ---
@@ -174,6 +188,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Purpose:** Record learning data from Linear ticket completions (internal use)
 
 **Request Body:**
+
 ```json
 {
   "issue_id": "GOO-12",
@@ -191,6 +206,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -200,6 +216,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **Database Operation:**
+
 - Inserts into `learning_journal` table
 - `issue_id` must be unique (constraint enforced)
 
@@ -210,6 +227,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Common Error Responses:**
 
 **400 Bad Request:**
+
 ```json
 {
   "success": false,
@@ -218,6 +236,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **404 Not Found:**
+
 ```json
 {
   "success": false,
@@ -226,6 +245,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 ```
 
 **500 Internal Server Error:**
+
 ```json
 {
   "success": false,
@@ -240,6 +260,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 **Current:** No rate limiting implemented
 
 **Future (v2):**
+
 - Story submission: 3 submissions per IP per day
 - Get stories: 100 requests per minute per IP
 
@@ -250,6 +271,7 @@ The Goodsomeday backend is built with n8n (visual workflow automation) rather th
 Each endpoint is a separate n8n workflow with these common patterns:
 
 **Typical Workflow Structure:**
+
 ```
 1. Webhook Trigger
    ↓
@@ -263,6 +285,7 @@ Each endpoint is a separate n8n workflow with these common patterns:
 ```
 
 **Error Handling Pattern:**
+
 - Each workflow has error handling paths
 - Database errors caught and returned as 500
 - Validation errors returned as 400
@@ -273,11 +296,12 @@ Each endpoint is a separate n8n workflow with these common patterns:
 ## Database Connection
 
 **n8n Credential Configuration:**
+
 ```
 Host: localhost (n8n and PostgreSQL on same VPS)
 Port: 5432
-Database: goodsomeday_prod
-User: goodsomeday_user
+Database: oolong_prod
+User: oolong_user
 SSL: Disabled (local connection)
 ```
 
@@ -291,7 +315,7 @@ SSL: Disabled (local connection)
 
 ```bash
 # Submit a story
-curl -X POST https://n8n.goodsomeday.com/webhook/submit-story \
+curl -X POST https://n8n.oolong.com/webhook/submit-story \
   -H "Content-Type: application/json" \
   -d '{
     "story_text": "I was the only girl in my high school computer science class...",
@@ -300,12 +324,13 @@ curl -X POST https://n8n.goodsomeday.com/webhook/submit-story \
   }'
 
 # Get stories
-curl https://n8n.goodsomeday.com/webhook/get-stories?pipeline_stage=student&limit=10
+curl https://n8n.oolong.com/webhook/get-stories?pipeline_stage=student&limit=10
 ```
 
 **Using Postman/Insomnia:**
+
 - Import the collection (TBD - future export)
-- Set base URL: `https://n8n.goodsomeday.com/webhook`
+- Set base URL: `https://n8n.oolong.com/webhook`
 - All endpoints use JSON content type
 
 ---
@@ -313,6 +338,7 @@ curl https://n8n.goodsomeday.com/webhook/get-stories?pipeline_stage=student&limi
 ## Future Enhancements
 
 **Planned (v2.0):**
+
 - [ ] Authentication for admin endpoints (JWT tokens)
 - [ ] Rate limiting per IP address
 - [ ] Story search endpoint (full-text search)
@@ -321,6 +347,7 @@ curl https://n8n.goodsomeday.com/webhook/get-stories?pipeline_stage=student&limi
 - [ ] Comments API (if comments feature is added)
 
 **Monitoring:**
+
 - [ ] n8n workflow execution logs
 - [ ] Error tracking and alerting
 - [ ] Performance metrics (response times)
@@ -330,12 +357,14 @@ curl https://n8n.goodsomeday.com/webhook/get-stories?pipeline_stage=student&limi
 ## Security Considerations
 
 **Current Measures:**
+
 - HTTPS only (enforced via Nginx)
 - IP address logging for spam prevention
 - Input validation on all fields
 - SQL injection protection (parameterized queries via n8n)
 
 **Future Measures:**
+
 - Admin authentication
 - CORS configuration for frontend domain
 - Request signing for sensitive operations

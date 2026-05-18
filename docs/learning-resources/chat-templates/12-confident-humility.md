@@ -1,15 +1,18 @@
-I need help developing confident humility as I learn full-stack development through Goodsomeday.
+I need help developing confident humility as I learn full-stack development through Oolong.
 
 **Context:**
+
 - Project: docs/learning-resources/chat-day1-foundation.md
 - Current phase: [Foundation / Core features / Polish / Deployed]
 - Days into project: [X/12]
 
 **The balance I'm trying to strike:**
+
 - **Confidence:** I'm capable of learning this, I can figure things out
 - **Humility:** I don't know what I don't know, I need help, I make mistakes
 
 **Current imbalance:**
+
 - [ ] Too humble: Afraid to share progress, apologize constantly, hesitate to help others
 - [ ] Too confident: Not asking for help, dismissing feedback, moving too fast
 - [ ] Swinging between: Imposter syndrome ↔ Dunning-Kruger
@@ -27,6 +30,7 @@ OR
 "I got feedback that my approach is 'not best practice' and I'm not sure if I should defend my learning choice or change everything"
 
 **What I need help with:**
+
 - [ ] When to teach vs when to stay quiet
 - [ ] How to share progress without seeming arrogant
 - [ ] How to accept help without seeming incompetent
@@ -37,6 +41,7 @@ OR
 
 **My goal:**
 Develop the skill of saying:
+
 - "I know X, I'm learning Y, and I don't know Z yet - and that's okay"
 - "Here's what I built and what I learned - feedback welcome"
 - "I don't understand this - can you explain?"

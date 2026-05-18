@@ -1,4 +1,4 @@
-# Claude Code Context Primer - Goodsomeday Frontend Extension
+# Claude Code Context Primer - Oolong Frontend Extension
 
 **When to use:** At the START of every Claude Code session, BEFORE asking for help
 
@@ -52,12 +52,14 @@ Confirm you've read these docs and understand my approach before we proceed.
 ## Why This Matters
 
 **Without context, Claude Code will:**
+
 - Assume you want traditional learning (explain every step)
 - Suggest hand-coded solutions instead of using your tools
 - Jump to execution before understanding what's already done
 - Miss that you're building in public with learning docs
 
 **With context, Claude Code will:**
+
 - Check commit history first
 - Use your tools (n8n, Claude Code generated components)
 - Focus on product/learning documentation
@@ -82,6 +84,7 @@ If Claude says/does any of these, STOP and re-share context:
 ## Example: Good vs Bad Claude Responses
 
 ### BAD (No Context):
+
 ```
 User: "Help me with GOO-12"
 Claude: "Sure! Let me teach you about database schema design.
@@ -89,6 +92,7 @@ First, let's understand what a primary key is..."
 ```
 
 ### GOOD (Has Context):
+
 ```
 User: "Help me with GOO-12"
 Claude: "Let me first check your commit history and foundation.md.
@@ -99,14 +103,14 @@ What's left: execute on VPS, create learning docs. Let me help with that."
 
 ---
 
-## Additional Context for Goodsomeday Frontend
+## Additional Context for Oolong Frontend
 
 **IMPORTANT:** Add this section to the copy-paste prompt above when working on frontend:
 
 ```
 ---
 
-## Goodsomeday Frontend Specific Context
+## Oolong Frontend Specific Context
 
 TECH STACK:
 - Next.js 14 (App Router)
@@ -134,12 +138,12 @@ KEY COMPONENTS ALREADY DESIGNED:
    - Badge (pipeline stage) - different colors per stage
    - Story text - readable with good line-height
    - Timestamp - subtle, bottom right
-   
+
 2. Sidebar filters - Collapsible sections, yellow headers when open
    - Focus area (High School, University, Mid Career)
    - Story themes (Career Change, First Job, etc.)
    - Industry (Technology, Healthcare, etc.)
-   
+
 3. Hero - Yellow background, large heading (72px), outline button
 4. Search bar - Full width before two-column layout starts
 
@@ -173,7 +177,7 @@ Then tell me what you found and what's left to build.
 
 ---
 
-### Example: Good Goodsomeday Frontend Response
+### Example: Good Oolong Frontend Response
 
 ```
 User: "Help me with GOO-16: StoryCard"
@@ -211,12 +215,12 @@ Once you confirm, I'll build and test with your mock data."
 - foundation.md - Full project approach
 - schema-design-philosophy.md - Example of product-first thinking
 - 07-strategic-prompting.md - How to get the most from Claude Code
-- strategic-build-plan.md - Goodsomeday high-level roadmap
+- strategic-build-plan.md - Oolong high-level roadmap
 - visual-design-mapping.md - Figma design specifications
 
 ---
 
-*Original created: 2025-10-20*
-*Goodsomeday extension added: 2025-11-05*
-*Use this at the START of EVERY Claude Code session*
-*Saves 30+ minutes of context correction per session*
+_Original created: 2025-10-20_
+_Oolong extension added: 2025-11-05_
+_Use this at the START of EVERY Claude Code session_
+_Saves 30+ minutes of context correction per session_

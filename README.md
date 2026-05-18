@@ -1,23 +1,23 @@
-# Goodsomeday
+# Oolong
 
 A platform for sharing career journey stories - built while learning **visual-first, AI-assisted full-stack development**.
 
 > **📚 This is a learning project.** I'm a visual learner and frontend developer exploring modern tools (n8n, Claude Code, Figma MCP) that let me build complete products without losing my soul to traditional backend development.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://goodsomeday.vercel.app) 
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://oolong.vercel.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
 
-## 🎯 What is Goodsomeday?
+## 🎯 What is Oolong?
 
-Goodsomeday is a platform for sharing transformative career journey stories - moments when people faced barriers in tech, reflected on their experiences, and took action that led to meaningful change.
+Oolong is a platform for sharing transformative career journey stories - moments when people faced barriers in tech, reflected on their experiences, and took action that led to meaningful change.
 
 **Inspired by:** Australia's recent [Leaky Pipeline Report](https://www.vic.gov.au/leaky-tech-pipeline-report) showing where we lose women in tech careers.
 
 ### The Story Format: From Barrier to Action
 
-Stories on Goodsomeday follow a narrative arc designed to move from victimhood to empowerment:
+Stories on Oolong follow a narrative arc designed to move from victimhood to empowerment:
 
 1. **What happened** - The negative experience or barrier (burnout, discrimination, imposter syndrome, lack of support)
 2. **Reflection** - How it made them think, what they realized about themselves or the system
@@ -25,6 +25,7 @@ Stories on Goodsomeday follow a narrative arc designed to move from victimhood t
 4. **Transformation** - How they've grown and what changed as a result
 
 **Stories are categorized by when they left (or almost left) the pipeline:**
+
 - **Student** - Barriers during education (high school, university)
 - **Early Career** - First 0-5 years in the industry
 - **Mid-Career** - 5+ years, experienced professionals
@@ -37,28 +38,33 @@ The platform focuses on authentic, structured storytelling with an emphasis on a
 
 ## 🚀 Tech Stack
 
-**Frontend** *(My Comfort Zone)*
+**Frontend** _(My Comfort Zone)_
+
 - [Next.js 14](https://nextjs.org/) - React framework with App Router
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
 - [Lucide React](https://lucide.dev/) - Icons
 - Focus: Beautiful, accessible interfaces for ALL users
 
-**Backend** *(Visual & AI-Assisted)*
+**Backend** _(Visual & AI-Assisted)_
+
 - [n8n](https://n8n.io/) - Visual workflow automation (no Express.js!)
 - [PostgreSQL](https://www.postgresql.org/) - Database (accessed via n8n nodes)
 - Visual drag-and-drop logic instead of hand-coded APIs
 
 **Infrastructure**
+
 - [Hostinger](https://www.hostinger.com/) - VPS hosting
 - [Nginx](https://nginx.org/) - Reverse proxy
 
 **AI & Automation**
+
 - [Claude Code](https://docs.anthropic.com/claude/docs/claude-code) - AI-assisted component generation
 - [Claude API](https://www.anthropic.com/) - Automated release notes
 - [Figma MCP](https://www.figma.com/) - Design-to-code integration (future goal)
 
 **Tools & Workflow**
+
 - [Linear](https://linear.app/) - Project management with learning documentation
 - [Figma](https://figma.com/) - Design system and component library
 - [GitHub](https://github.com/) - Version control with PR workflow
@@ -74,17 +80,20 @@ The platform focuses on authentic, structured storytelling with an emphasis on a
 I'm not learning "full-stack" the traditional way. I'm learning **visual-first, AI-assisted full-stack**:
 
 **What I'm Using:**
+
 - 🎨 **n8n** for backend logic (drag-and-drop workflows, not Express.js)
 - 🤖 **Claude Code** for component generation (review, don't write from scratch)
 - 📐 **Figma MCP** for design-to-code (the real end goal)
 
 **What I'm NOT Doing:**
+
 - ❌ Hand-coding CRUD APIs
 - ❌ Writing raw SQL queries
 - ❌ Becoming a database optimization expert
 - ❌ Spending months on traditional backend learning
 
 **What I AM Doing:**
+
 - ✅ Using visual tools that match how I think
 - ✅ Letting AI handle boilerplate I don't want to write
 - ✅ Focusing on beautiful, accessible frontends
@@ -94,12 +103,14 @@ I'm not learning "full-stack" the traditional way. I'm learning **visual-first, 
 ### Why This Matters
 
 **I care about:**
+
 - Beautiful, accessible interfaces
-- Equality and fair work in tech  
+- Equality and fair work in tech
 - Design systems and collaboration
 - Making technology approachable for everyone
 
 **I don't care about:**
+
 - Writing server boilerplate manually
 - SQL optimization minutiae
 - Pretending to love what I don't
@@ -109,6 +120,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 ### Skills I'm Developing
 
 **Technical:**
+
 - Visual workflow design (n8n)
 - AI-assisted development (Claude Code)
 - Backend concepts (without drowning in syntax)
@@ -116,6 +128,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 - Infrastructure basics (just enough to be dangerous)
 
 **Professional:**
+
 - Building in public
 - Systematic learning documentation
 - Git workflow best practices
@@ -123,6 +136,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 - Learning efficiency over mastery
 
 **Track My Progress:**
+
 - [Changelog](docs/CHANGELOG.md) - What's been built
 - [Learning Resources](docs/learning-resources/) - What I learned building each feature
 - [Architecture](docs/ARCHITECTURE.md) - How it all fits together
@@ -132,6 +146,7 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 ## ✨ Features
 
 **Current (MVP):**
+
 - ✅ Story submission with visual validation (n8n workflow)
 - ✅ Story feed with filtering by pipeline stage
 - ✅ Light/dark theme system (accessible color contrast)
@@ -139,11 +154,13 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 - ✅ Automated release notes (Claude API)
 
 **In Progress:**
+
 - 🔄 Visual backend workflows (replacing traditional API code)
 - 🔄 AI-generated components (Claude Code + Figma specs)
 - 🔄 Accessibility-first design system
 
 **Planned (v2.0+):**
+
 - 📋 Figma MCP integration (design → code automation)
 - 📋 Design system documentation generator
 - 📋 Comments on stories
@@ -167,8 +184,8 @@ The future isn't "everyone becomes a traditional full-stack developer." It's "us
 
 ```bash
 # Clone the repository
-git clone https://github.com/MoodyBones/goodsomeday.git
-cd goodsomeday
+git clone https://github.com/MoodyBones/oolong.git
+cd oolong
 
 # Install dependencies
 npm install
@@ -197,7 +214,7 @@ For detailed setup instructions including VPS, database, and n8n configuration, 
 ## 📁 Project Structure
 
 ```
-goodsomeday/
+oolong/
 ├── src/
 │   ├── app/                 # Next.js app directory
 │   │   ├── page.tsx        # Home page
@@ -278,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Visual learner • Frontend developer • Accessibility advocate
 
 - GitHub: [@MoodyBones](https://github.com/MoodyBones)
-- Project: [goodsomeday](https://github.com/MoodyBones/goodsomeday)
+- Project: [oolong](https://github.com/MoodyBones/oolong)
 - LinkedIn: [Connect with me](https://www.linkedin.com/in/mel-jones-4a5835182/)
 - Substack: [@m00dy](https://substack.com/@m00dy)
 
@@ -289,6 +306,7 @@ Visual learner • Frontend developer • Accessibility advocate
 I'm building this project in public and documenting a non-traditional path to full-stack development.
 
 **If you're:**
+
 - A visual learner
 - Frontend-focused but need backend capabilities
 - Interested in AI-assisted development

@@ -8,6 +8,7 @@
 **A few years ago, after burnout, I thought coding wasn't for me anymore.**
 
 **This week I:**
+
 - Set up my first VPS
 - Configured SSH key authentication
 - Hardened server security (firewall, disabled root login)
@@ -28,6 +29,7 @@ Who else is using AI to match their unique learning style? How are you prioritiz
 ---
 
 **Notes:**
+
 - Emotional vulnerability + technical credibility
 - Specific accomplishments from GOO-9
 - Call-to-action at the end

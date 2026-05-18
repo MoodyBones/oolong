@@ -10,23 +10,25 @@
 ### 1. No More `tailwind.config.ts`
 
 **v3 (old way):**
+
 ```typescript
 // tailwind.config.ts
 export default {
   theme: {
     extend: {
       colors: {
-        secondary: "#F9D762"
-      }
-    }
-  }
-}
+        secondary: '#F9D762',
+      },
+    },
+  },
+};
 ```
 
 **v4 (new way):**
+
 ```css
 /* globals.css */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-secondary: #f9d762;
@@ -55,6 +57,7 @@ All your design system tokens go in `globals.css` using `@theme`:
 ### 3. Using Tokens in Classes
 
 **Arbitrary values (works everywhere):**
+
 ```tsx
 <div className="bg-[#F9D762]">  {/* Direct hex */}
 <div className="w-[240px]">      {/* Direct pixel value */}
@@ -62,6 +65,7 @@ All your design system tokens go in `globals.css` using `@theme`:
 ```
 
 **Named tokens (when defined in @theme):**
+
 ```tsx
 <div className="bg-secondary">   {/* Uses --color-secondary */}
 <div className="w-sidebar">      {/* Uses --width-sidebar */}
@@ -70,6 +74,7 @@ All your design system tokens go in `globals.css` using `@theme`:
 ### 4. No CLI `init` Command
 
 **v3:**
+
 ```bash
 npx tailwindcss init
 ```
@@ -85,9 +90,9 @@ Just create `globals.css` with `@import "tailwindcss"` - that's it!
 
 ```css
 @theme {
-  /* Colors - Goodsomeday palette */
+  /* Colors - Oolong palette */
   --color-primary: #000000;
-  --color-secondary: #f9d762;      /* Golden yellow */
+  --color-secondary: #f9d762; /* Golden yellow */
   --color-background: #ffffff;
   --color-surface: #f5f5f5;
   --color-text-primary: #000000;
@@ -148,12 +153,16 @@ Just create `globals.css` with `@import "tailwindcss"` - that's it!
 If you see v3 syntax in old docs:
 
 **Old (v3):**
+
 ```typescript
 // tailwind.config.ts
-colors: { secondary: "#F9D762" }
+colors: {
+  secondary: '#F9D762';
+}
 ```
 
 **New (v4):**
+
 ```css
 /* globals.css */
 @theme {
@@ -173,5 +182,5 @@ colors: { secondary: "#F9D762" }
 
 ---
 
-*Created: 2025-11-05*
-*Related: GOO-6, Tailwind CSS v4.1.16*
+_Created: 2025-11-05_
+_Related: GOO-6, Tailwind CSS v4.1.16_

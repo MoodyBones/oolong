@@ -1,12 +1,14 @@
-I need help navigating the people/communication side of the Goodsomeday project.
+I need help navigating the people/communication side of the Oolong project.
 
 **Context:**
+
 - Building in public as a learning project
 - Sharing progress with: [dev community / potential users / mentors / team / etc.]
 - Project details: docs/learning-resources/chat-day1-foundation.md
 
 **Current situation:**
 [Describe the people challenge you're facing, e.g.:]
+
 - Asking for feedback without seeming needy
 - Explaining delays or pivots
 - Managing expectations (mine and others')
@@ -28,6 +30,7 @@ OR
 "I want to ask for help but don't want to waste people's time with basic questions"
 
 **What I need:**
+
 - [ ] Reframe my perspective on the situation
 - [ ] Draft a compassionate but honest communication
 - [ ] Understand the other person's viewpoint
