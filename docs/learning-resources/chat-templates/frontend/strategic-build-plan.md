@@ -1,4 +1,5 @@
 # Goodsomeday Frontend - Strategic Build Plan
+
 **High-Level Roadmap (No Prescriptive Design Decisions)**
 
 ---
@@ -12,12 +13,14 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 ## 📊 Current State
 
 **✅ What You Have:**
+
 - Figma design complete with code snippets
 - Design system defined (colors, spacing, typography)
 - Clear component structure from Figma Make iterations
 - Mock data structure understood
 
 **🎯 What You Need:**
+
 - Next.js project initialized
 - Design system configured in code
 - Components built from Figma designs
@@ -29,9 +32,11 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 ## 🏗️ Build Strategy (3 Sessions)
 
 ### Session 1: Foundation (45-60 min)
+
 **Goal:** Get Next.js running with your design system
 
 **High-level tasks:**
+
 1. Initialize Next.js 14 project (TypeScript, Tailwind, App Router)
 2. Install and configure shadcn/ui
 3. Set up your color tokens in Tailwind config
@@ -41,6 +46,7 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 **Success metric:** You can run the dev server and toggle between light/dark themes
 
 **Your design decisions:**
+
 - How do you want to organize components? (ui/ vs features/ vs layout/)
 - Which shadcn components to install upfront vs on-demand?
 - Where should theme toggle live? (just footer, or both header/footer?)
@@ -48,9 +54,11 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 ---
 
 ### Session 2: Core Components (60-90 min)
+
 **Goal:** Build the main UI components from your Figma design
 
 **High-level tasks:**
+
 1. Create mock data file with story structure
 2. Build StoryCard component
    - Badge component for pipeline stages
@@ -66,6 +74,7 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 **Success metric:** You can see story cards displaying mock data, filters work on desktop and mobile
 
 **Your design decisions:**
+
 - Badge styling - custom variants or inline Tailwind?
 - Text truncation - how many lines?
 - Filter state management - useState or something more complex?
@@ -75,9 +84,11 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 ---
 
 ### Session 3: Layout & Polish (45-60 min)
+
 **Goal:** Complete the homepage layout and navigation
 
 **High-level tasks:**
+
 1. Build header component
    - Navigation, search icon, mobile menu
 2. Build hero section
@@ -92,6 +103,7 @@ Build the frontend foundation with mock data so you can see your Figma design wo
 **Success metric:** Complete homepage that matches your Figma design on both mobile and desktop
 
 **Your design decisions:**
+
 - Navigation behavior on mobile (hamburger menu, drawer, dropdown?)
 - Hero button interaction (link to submit page? modal? disabled for now?)
 - Search bar functionality (just UI for now or implement filtering?)
@@ -117,6 +129,7 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 ## 🔧 Technical Approach
 
 ### Philosophy
+
 - **Use shadcn/ui as foundation** - Customize where needed, don't rebuild from scratch
 - **Figma code as reference only** - Refactor inline styles to Tailwind utilities
 - **Mobile-first responsive** - Your Figma shows mobile, expand to desktop
@@ -125,6 +138,7 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 - **Component composition** - Small, reusable pieces
 
 ### Code Quality Standards
+
 - ✅ Tailwind utilities (no inline styles)
 - ✅ Responsive breakpoints (sm, md, lg, xl)
 - ✅ Theme-aware colors (use tokens, not hardcoded hex)
@@ -134,6 +148,7 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 - ✅ Small, focused components
 
 ### What Good Looks Like
+
 ```typescript
 // Good - uses design tokens, responsive, semantic
 <section className="bg-secondary py-2xl px-md">
@@ -155,21 +170,25 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 ## 📋 Key Decisions You'll Make
 
 ### Component Structure
+
 - How to organize shadcn customizations?
 - When to create new components vs modify existing?
 - How to structure props and TypeScript types?
 
 ### Responsive Behavior
+
 - Breakpoint for sidebar → stacked filters?
 - Mobile navigation pattern?
 - Touch target sizes for mobile?
 
 ### State Management
+
 - Where does filter state live?
 - How to pass theme preference around?
 - Form state for search bar?
 
 ### Styling Approach
+
 - Override shadcn defaults or create variants?
 - Utility classes vs custom CSS?
 - How to handle animations/transitions?
@@ -181,22 +200,26 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 ### From Figma to Code
 
 **Colors** → Tailwind config tokens
+
 - `bg-secondary` instead of `bg-[#F9D762]`
 - `text-primary` instead of `text-black`
 - `border-surface` instead of `border-[#E0E0E0]`
 
 **Spacing** → Tailwind utilities
+
 - `gap-md` (16px) instead of `gap-4`
 - `py-2xl` (48px) instead of `py-12`
 - Use your 8px base unit system
 
 **Typography** → Consistent hierarchy
+
 - H1: 72px (`text-7xl`)
 - H2: 48px (`text-5xl`)
 - H3: 18px (`text-lg`)
 - Body: 16px (`text-base`)
 
 **Components** → shadcn/ui + customization
+
 - Start with shadcn Card, Badge, Button
 - Customize styling to match your Figma
 - Add your own components where shadcn doesn't fit
@@ -206,18 +229,21 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 ## ✅ Definition of Done
 
 ### Session 1 Complete When:
+
 - [ ] Next.js app runs on localhost:3000
 - [ ] Theme toggle switches between light/dark
 - [ ] Your golden yellow color is configured and working
 - [ ] Clean folder structure established
 
 ### Session 2 Complete When:
+
 - [ ] StoryCard component displays mock data
 - [ ] Filters show on desktop (sidebar) and mobile (stacked)
 - [ ] Badge colors work for each pipeline stage
 - [ ] Story feed shows multiple cards in vertical stack
 
 ### Session 3 Complete When:
+
 - [ ] Complete homepage visible
 - [ ] Header, hero, content, footer all present
 - [ ] Responsive behavior works (mobile and desktop)
@@ -228,16 +254,18 @@ These come later when backend workflows (GOO-13, GOO-14) are complete.
 ## 🚀 Getting Started
 
 ### Pre-flight Checklist
+
 - [ ] Figma design open for reference
 - [ ] Claude Code session started with context prompt
 - [ ] Terminal ready in your projects folder
 - [ ] Git initialized or ready to commit
 
 ### First Command
+
 ```bash
 npx create-next-app@latest goodsomeday-frontend
 # ✅ TypeScript? Yes
-# ✅ ESLint? Yes  
+# ✅ ESLint? Yes
 # ✅ Tailwind? Yes
 # ✅ src/ directory? Yes
 # ✅ App Router? Yes
@@ -245,6 +273,7 @@ npx create-next-app@latest goodsomeday-frontend
 ```
 
 ### Then
+
 1. Open Claude Code setup prompt
 2. Give context about current state
 3. Start building Session 1
@@ -256,6 +285,7 @@ npx create-next-app@latest goodsomeday-frontend
 ## 💡 Working With Claude Code
 
 ### Good Workflow
+
 1. Give Claude Code the setup prompt
 2. Ask for high-level approach first
 3. Make your design decisions
@@ -264,6 +294,7 @@ npx create-next-app@latest goodsomeday-frontend
 6. Document what you learned
 
 ### Example Interaction
+
 ```
 YOU: "Let's build the StoryCard component"
 
@@ -285,6 +316,7 @@ CLAUDE CODE: [Builds according to your preferences]
 ```
 
 ### Let Claude Code Handle
+
 - ✅ Boilerplate code generation
 - ✅ TypeScript type definitions
 - ✅ Component file structure
@@ -293,6 +325,7 @@ CLAUDE CODE: [Builds according to your preferences]
 - ✅ Responsive breakpoints
 
 ### You Handle
+
 - ✅ Design decisions (colors, spacing, layout)
 - ✅ Component architecture choices
 - ✅ When to use shadcn vs custom
@@ -306,21 +339,25 @@ CLAUDE CODE: [Builds according to your preferences]
 After each session, document:
 
 **What you built:**
+
 - List components created
 - Key files added/modified
 
 **What you learned:**
+
 - New concepts or patterns
 - shadcn/ui insights
 - Tailwind techniques
 - Next.js App Router patterns
 
 **What you decided:**
+
 - Design choices you made
 - Why you chose X over Y
 - Trade-offs considered
 
 **What's next:**
+
 - Remaining work for this ticket
 - Blockers or questions
 - Ideas for improvements
@@ -330,6 +367,7 @@ After each session, document:
 ## 🎯 Success Metrics
 
 **Technical Success:**
+
 - ✅ App runs without errors
 - ✅ Responsive on mobile and desktop
 - ✅ Theme toggle works
@@ -338,6 +376,7 @@ After each session, document:
 - ✅ Accessible (keyboard nav, focus states)
 
 **Learning Success:**
+
 - ✅ You understand your component structure
 - ✅ You can explain your design decisions
 - ✅ You know what shadcn does vs what you customized
@@ -345,6 +384,7 @@ After each session, document:
 - ✅ You can continue building tomorrow
 
 **Product Success:**
+
 - ✅ Looks like your Figma design
 - ✅ Feels polished and professional
 - ✅ Ready for real data when backend is done
@@ -355,12 +395,14 @@ After each session, document:
 ## 🔄 Iterative Refinement
 
 **Don't aim for perfect first try:**
+
 1. Get it working (rough version)
 2. Make it look good (visual polish)
 3. Make it right (refactor, optimize)
 4. Make it better (accessibility, edge cases)
 
 **Commit after each stage:**
+
 - "feat: add StoryCard component (rough version)"
 - "style: polish StoryCard styling to match Figma"
 - "refactor: extract Badge to separate component"
@@ -371,6 +413,7 @@ After each session, document:
 ## 📚 Reference Links
 
 **Keep these tabs open:**
+
 - Your Figma design
 - [shadcn/ui docs](https://ui.shadcn.com/docs)
 - [Tailwind docs](https://tailwindcss.com/docs)

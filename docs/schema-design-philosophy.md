@@ -13,11 +13,13 @@
 During initial schema design, we discovered a critical misalignment between technical implementation and product vision.
 
 **Initial approach:**
+
 - Stories as unstructured text blobs
 - Generic "leaky pipeline" categories
 - Passive data collection mindset
 
 **Actual vision:**
+
 - Stories as guided transformation narratives
 - Specific life-phase categories
 - Active pedagogical tool that teaches people how to reframe their experiences
@@ -40,6 +42,7 @@ Stories must demonstrate transformation, not just document trauma.
 The structure must capture both the barrier AND the growth - the narrative arc is non-negotiable.
 
 **What this means:**
+
 - Stories aren't just "what happened to me"
 - They're "what happened, what I learnt, what I did, how I grew"
 - The format itself teaches people to see their own agency
@@ -49,9 +52,10 @@ The structure must capture both the barrier AND the growth - the narrative arc i
 Passive waiting doesn't create hope. Taking action creates hope.
 
 **Schema Implication:**  
-We must capture what people *did* and what *changed as a result* - not just how they felt.
+We must capture what people _did_ and what _changed as a result_ - not just how they felt.
 
 **What this means:**
+
 - Action is a required element of every story
 - Outcome/transformation must be visible
 - Both "staying in tech" and "leaving tech" can be empowered choices
@@ -64,6 +68,7 @@ There is no single "right" outcome. Growth is the constant.
 Don't force stories into binary categories. The transformation matters more than the destination.
 
 **Valid story arcs:**
+
 - Stayed in tech with new boundaries/environment
 - Left tech and found fulfilment elsewhere
 - Still navigating but taking intentional steps
@@ -77,8 +82,9 @@ The frontend provides narrative prompts. The backend stores cohesive narratives.
 One `story_text` field (not separate fields for each narrative element) to preserve flow and readability.
 
 **How it works:**
+
 - Frontend: Guided prompts help users structure their thinking
-  - "What happened?" 
+  - "What happened?"
   - "What did you realise?"
   - "What action did you take?"
   - "How did things change?"
@@ -100,6 +106,7 @@ BARRIER → REFLECTION → ACTION → TRANSFORMATION
 The negative experience that caused someone to drop out or almost drop out of the pipeline.
 
 **Examples:**
+
 - Burnout from toxic workplace culture
 - Discrimination based on gender/race/disability
 - Imposter syndrome with no support system
@@ -115,6 +122,7 @@ The negative experience that caused someone to drop out or almost drop out of th
 How the experience made them think and what they learnt about themselves or the system.
 
 **Examples:**
+
 - "I realised the problem wasn't me, it was the system"
 - "I learnt I was sacrificing my health for a job that didn't value me"
 - "I understood that representation matters more than I thought"
@@ -125,9 +133,10 @@ How the experience made them think and what they learnt about themselves or the 
 
 ### 3. Action (Response)
 
-What they actually *did* about it - concrete steps taken.
+What they actually _did_ about it - concrete steps taken.
 
 **Examples:**
+
 - Changed companies or teams
 - Set new boundaries around work hours
 - Found or created community/mentorship
@@ -145,6 +154,7 @@ What they actually *did* about it - concrete steps taken.
 How they've grown and what actually changed as a result of their actions.
 
 **Examples:**
+
 - "I'm now thriving in a company that values work-life balance"
 - "I left tech and I've never been happier"
 - "I'm still in tech but I lead with boundaries now"
@@ -160,23 +170,26 @@ How they've grown and what actually changed as a result of their actions.
 
 ### Why These Matter
 
-The "leaky pipeline" research shows that women (and other underrepresented groups) leave tech at specific points in their journey. Understanding *when* people leave helps identify systemic patterns.
+The "leaky pipeline" research shows that women (and other underrepresented groups) leave tech at specific points in their journey. Understanding _when_ people leave helps identify systemic patterns.
 
 ### The Categories
 
 **Student** - Barriers during education
+
 - High school CS classes
-- University/college programmes  
+- University/college programmes
 - Bootcamps or self-study
 - Internship experiences
 
 **Early Career** - First 0-5 years in industry
+
 - First job experiences
 - Junior → mid-level transition
 - Finding your footing
 - Building professional identity
 
 **Mid-Career** - 5+ years, experienced professionals
+
 - Leadership transition challenges
 - Senior-level discrimination
 - Long-term sustainability questions
@@ -184,7 +197,7 @@ The "leaky pipeline" research shows that women (and other underrepresented group
 
 ### Why Not More Categories?
 
-**Intentional simplicity.** 
+**Intentional simplicity.**
 
 Too many categories fragment the data and make patterns harder to see. These three phases capture the major transition points where people commonly leave.
 
@@ -200,6 +213,7 @@ Too many categories fragment the data and make patterns harder to see. These thr
 **Decision:** One `story_text` field with frontend prompts
 
 **Rationale:**
+
 - Stories read as cohesive narratives (better user experience)
 - Frontend can still guide structure through UI prompts
 - Simpler database design
@@ -214,6 +228,7 @@ Too many categories fragment the data and make patterns harder to see. These thr
 **Decision:** Captured implicitly within the story narrative, not as separate field
 
 **Rationale:**
+
 - The transformation is the climax of the story - it should flow naturally
 - Redundant to store separately when it's already in the narrative
 - Keeps schema simpler
@@ -229,6 +244,7 @@ Too many categories fragment the data and make patterns harder to see. These thr
 **Implementation:** `current_status` field - nullable, collected at end of story flow (see Open Questions #1 for UX details)
 
 **Rationale:**
+
 - Enables pattern analysis across pipeline stages
 - Helps readers find relevant stories
 - Collected **after** story is written to minimize bias
@@ -237,6 +253,7 @@ Too many categories fragment the data and make patterns harder to see. These thr
 - Both staying and leaving presented as equally valid paths
 
 **Safeguards:**
+
 - Does not affect story display or ranking
 - Cannot be filtered to exclude either outcome
 - Used only for aggregate analytics and personal reflection
@@ -248,13 +265,15 @@ Too many categories fragment the data and make patterns harder to see. These thr
 ### What Gets Moderated
 
 **Remove:**
+
 - Hate speech or harassment
-- Spam or promotional content  
+- Spam or promotional content
 - Content that endangers minors
 - Personal attacks on named individuals
 - Content that violates legal/safety requirements
 
 **Do NOT remove:**
+
 - Stories that feel "too negative" (barriers are real)
 - Stories without a clear transformation arc (YET - prompt for revision)
 - Stories that end with "still figuring it out" (that's valid)
@@ -265,6 +284,7 @@ Too many categories fragment the data and make patterns harder to see. These thr
 **Goal:** Surface stories that help others, not police perfectionism
 
 **Approach:**
+
 - If a story lacks the transformation arc, prompt the author to add it rather than rejecting
 - If a story is all trauma/no agency, guide them to reframe
 - Focus on safety and community guidelines, not narrative perfection
@@ -280,12 +300,14 @@ Too many categories fragment the data and make patterns harder to see. These thr
 **The vision:** People don't just read stories - they process them.
 
 **Possible flows:**
+
 1. **Read → Reflect:** User reads a story and journals about how it relates to their experience
-2. **Write → Process:** User writes their story, then continues reflecting on it over time  
+2. **Write → Process:** User writes their story, then continues reflecting on it over time
 3. **Compare → Learn:** User sees patterns across multiple stories and identifies systemic issues
 
 **Schema consideration for future:**  
 Learning journal entries may need to reference specific stories (foreign key relationship) to enable:
+
 - "Stories that resonated with me"
 - "How my thinking evolved after reading X"
 - Tracking which stories create the most reflection/impact
@@ -305,6 +327,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 **Chosen Approach:** Option 5 - At End of Story Flow, Before Review Screen
 
 **Flow:**
+
 1. User completes all story prompts (barrier → reflection → action → transformation)
 2. Before review screen: "One last question to help us track pipeline patterns: Where are you today?"
    - Radio buttons: Stayed in tech / Left tech / Still navigating / Prefer not to say
@@ -314,19 +337,22 @@ Learning journal entries may need to reference specific stories (foreign key rel
 5. Submit when ready
 
 **Why This Works:**
+
 - **It's a conversation, not a test** - The question prompts reflection at the natural end of their narrative
-- **Iteration is encouraged** - If answering "where are you today?" makes them realize something's missing from their story, going back to refine is *working as intended*
+- **Iteration is encouraged** - If answering "where are you today?" makes them realize something's missing from their story, going back to refine is _working as intended_
 - **The question serves the storytelling** - Acts as a final reflection prompt: "Did I actually capture my transformation?"
 - **Dance, don't lock** - Multiple passes = deeper thinking. This is a reframing tool, not a form submission
 - **Minimal bias** - Story is written before categorization, but refinement based on reflection is valuable
 - **Optional** - "Prefer not to say" removes pressure
 
 **Data Benefits:**
+
 - Enables pattern analysis (e.g., "40% of mid-career stories involve leaving tech")
 - Could help match readers with relevant story types
 - Tracks whether platform serves both paths equally
 
 **Safeguards:**
+
 - Clearly framed as pattern-tracking, not judgment
 - Doesn't affect how story is displayed to readers
 - Both paths presented as equally valid choices
@@ -337,6 +363,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 **Question:** Should people be able to update their stories as their journey continues?
 
 **Considerations:**
+
 - **Pro:** Reflects reality (perspectives change, new chapters emerge)
 - **Pro:** Shows continued growth
 - **Con:** Complicates moderation (re-review needed?)
@@ -349,6 +376,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 **Question:** How does attribution affect the transformation narrative?
 
 **Considerations:**
+
 - **Anonymous:** Safer for vulnerable stories, removes ego
 - **Named:** Builds community, enables follow-up, shows courage
 - **Both:** Gives authors control, but complicates moderation
@@ -360,6 +388,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 **Question:** Should stories have comments? How does that affect the pedagogical goal?
 
 **Considerations:**
+
 - **Pro:** Community support, shared experiences, reduces isolation
 - **Con:** Risk of invalidation, toxic positivity, or derailment
 - **Con:** Moderation complexity increases exponentially
@@ -371,6 +400,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 ## Implementation Checklist
 
 ### Phase 1: Core Schema (Current)
+
 - [ ] Stories table with transformation narrative structure
 - [ ] Pipeline stage categories (student/early_career/mid_career)
 - [ ] Moderation workflow
@@ -378,6 +408,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 - [ ] Single `story_text` field storing complete narrative
 
 ### Phase 2: Enhancement (Future)
+
 - [ ] Learning journal integration
 - [ ] Story analytics (what resonates most?)
 - [ ] Optional outcome metadata (if validated by research)
@@ -385,6 +416,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 - [ ] Search by pipeline stage and themes
 
 ### Phase 3: Community (Way Future)
+
 - [ ] Comments with strong moderation
 - [ ] User profiles (if needed)
 - [ ] "Stories like this" recommendations
@@ -397,6 +429,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 ### Accessibility Considerations
 
 **Must-haves:**
+
 - Clear visual hierarchy in story display (barrier → reflection → action → transformation)
 - Sufficient colour contrast for text at all sizes
 - Keyboard navigation through story prompts
@@ -404,6 +437,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 - Alt text for any images in stories
 
 **Nice-to-haves:**
+
 - Text size controls for long-form reading
 - Dyslexia-friendly font options
 - Reading time estimates
@@ -414,6 +448,7 @@ Learning journal entries may need to reference specific stories (foreign key rel
 **Tone:** Warm, hopeful, empowering (not corporate, not overly clinical)
 
 **Elements:**
+
 - Generous white space around stories
 - Soft, accessible colour palette
 - Clear typography for long-form reading
@@ -427,12 +462,14 @@ Learning journal entries may need to reference specific stories (foreign key rel
 ### How We'll Know This Is Working
 
 **Quantitative:**
+
 - Stories submitted vs. stories that complete the transformation arc
 - Time spent reading stories (engagement)
 - Return visits (people come back to read more)
 - Completion rate of submission flow
 
 **Qualitative:**
+
 - Stories show genuine reflection and agency (not just venting)
 - Readers report feeling hopeful after reading
 - Authors report clarity gained through writing
@@ -459,7 +496,7 @@ But rather: "Others faced this, took action, and grew - so can I" (solidarity WI
 **This is a living document.** As the product evolves, update this document to reflect:
 
 - New insights from user research
-- Schema changes and their rationale  
+- Schema changes and their rationale
 - Resolved open questions
 - Emerging patterns in story submissions
 - Moderation policy updates

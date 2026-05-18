@@ -1,6 +1,7 @@
 I need help with database/backend work for Goodsomeday.
 
 **Context:**
+
 - Database: PostgreSQL on VPS
 - Backend: n8n workflows
 - Working on: [GOO-XX: Workflow/Schema name]
@@ -9,6 +10,7 @@ I need help with database/backend work for Goodsomeday.
 [Describe what you're building - schema design, n8n workflow, API endpoint]
 
 **Where I am:**
+
 - [ ] Design phase - need schema advice
 - [ ] Implementation - building the workflow
 - [ ] Testing - something's not working

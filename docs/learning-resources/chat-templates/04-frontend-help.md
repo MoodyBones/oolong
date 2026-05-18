@@ -1,6 +1,7 @@
 I need help building a frontend component for Goodsomeday.
 
 **Context:**
+
 - Project tech stack: Next.js 14, TypeScript, Tailwind
 - Working on Linear ticket: [GOO-XX: Component name]
 - Using Claude Code: [Yes/No]
@@ -12,6 +13,7 @@ I need help building a frontend component for Goodsomeday.
 [Describe your attempts or "Haven't started yet"]
 
 **Specific help needed:**
+
 - [ ] Component architecture/structure
 - [ ] TypeScript typing
 - [ ] Tailwind styling approach
@@ -20,6 +22,7 @@ I need help building a frontend component for Goodsomeday.
 - [ ] Debugging specific issue: [describe]
 
 **My approach:**
+
 - I want to understand the pattern, not just copy code
 - Explain trade-offs when there are multiple solutions
 - Help me learn to debug, not just fix it for me

@@ -2,7 +2,7 @@
 
 Set up PostgreSQL today and it was... surprisingly straightforward? Installed, created a database, created a user, granted permissions, tested connection from n8n. Done.
 
-The interesting part was understanding the hierarchy. There's the PostgreSQL *server* (the thing running on port 5432), then *databases* within that server (I created `goodsomeday_prod`), then *users* who can access those databases (created `goodsomeday_user`). And then within a database there's *schemas* which is like another layer of organization. It's nested all the way down.
+The interesting part was understanding the hierarchy. There's the PostgreSQL _server_ (the thing running on port 5432), then _databases_ within that server (I created `goodsomeday_prod`), then _users_ who can access those databases (created `goodsomeday_user`). And then within a database there's _schemas_ which is like another layer of organization. It's nested all the way down.
 
 Learned why you don't just use the superuser (`postgres`) for everything: principle of least privilege. If n8n gets compromised, the attacker only has access to `goodsomeday_prod`, not every database on the server. Makes sense.
 
@@ -14,6 +14,6 @@ Next: actually designing the database schema. Tables for stories, moderation sta
 
 —
 
-**One learning:** PostgreSQL permissions work in layers. You need to grant access to the *database* (`GRANT ALL PRIVILEGES ON DATABASE`) AND to the *schema* within that database (`GRANT ALL ON SCHEMA public`). Missing either one = n8n can't create tables.
+**One learning:** PostgreSQL permissions work in layers. You need to grant access to the _database_ (`GRANT ALL PRIVILEGES ON DATABASE`) AND to the _schema_ within that database (`GRANT ALL ON SCHEMA public`). Missing either one = n8n can't create tables.
 
 **One struggle:** The `\c` command in psql is a meta-command (not SQL), so you can't run it on the same line as a SQL statement. Tried to do `\c database; GRANT ALL...` and got a cryptic "invalid integer value" error. Meta-commands need their own line. psql quirks.

@@ -8,7 +8,7 @@
 
 **What:** A platform for sharing career journey stories, inspired by Australia's Leaky Pipeline Report  
 **Why:** To learn visual-first, AI-assisted full-stack development while building something meaningful  
-**How:** Using modern tools (n8n, Claude Code, Figma MCP) that match a visual learner's style  
+**How:** Using modern tools (n8n, Claude Code, Figma MCP) that match a visual learner's style
 
 **Total estimated effort:** 24-34 hours  
 **Typical timeframe:** 2-3 weeks  
@@ -53,15 +53,18 @@
 ### Your Unique Approach
 
 **Traditional Path:**
+
 - Learn Express.js → Write API routes → Master SQL → Optimise databases
 
 **Your Path:**
+
 - Use n8n visual workflows (no Express.js)
 - PostgreSQL via n8n nodes (minimal raw SQL)
 - Claude Code generates boilerplate
 - Stay frontend-focused, use tools for the rest
 
 **Why It Works:**
+
 - You're a visual learner
 - Databases don't excite you (and that's fine)
 - Your passion: beautiful, accessible frontends
@@ -73,21 +76,25 @@
 ## Tech Stack Rationale
 
 ### Frontend (Your Comfort Zone)
+
 - **Next.js 14:** App router, server components, modern patterns
 - **TypeScript:** Type safety, better learning through explicit interfaces
 - **Tailwind CSS:** Utility-first, fast iteration, matches component thinking
 
 ### Backend (Visual & AI-Assisted)
+
 - **n8n:** Visual workflow automation - see the logic flow, no Express.js
 - **PostgreSQL:** Industry-standard database, accessed via n8n nodes
 - **Claude Code:** Generates components and boilerplate you don't want to write
 
 ### Infrastructure
+
 - **VPS (DigitalOcean):** Real server experience, full control
 - **Nginx:** Reverse proxy, SSL termination
 - **PM2:** Process management, auto-restart
 
 ### Future Goal
+
 - **Figma MCP:** Design-to-code automation (this is where you're really headed)
 - **Code Connect:** Better design-developer collaboration
 
@@ -100,6 +107,7 @@
 **Estimated effort:** 5-6 hours (2-3 sessions)  
 **Status:** Done  
 **What you completed:**
+
 - Linear workspace with 20 structured tickets (GOO-6 to GOO-25)
 - GitHub repository with professional README
 - Linear ↔ GitHub two-way sync and auto-branch creation
@@ -109,6 +117,7 @@
 - Fish shell aliases for efficient workflow
 
 **Deliverables:**
+
 - Linear project: Goodsomeday
 - GitHub repo: MoodyBones/goodsomeday
 - docs/learning-resources/ structure
@@ -117,6 +126,7 @@
 - ~/.config/fish/config.fish (aliases configured)
 
 **Key learnings:**
+
 - Git workflow with PRs (even solo)
 - Commit message conventions
 - Template-based communication
@@ -131,16 +141,19 @@
 
 **Estimated effort:** 6-8 hours (3-4 sessions)  
 **What you'll complete:**
+
 - VPS provisioning and security hardening
 - n8n installation with SSL
 - PostgreSQL database setup
 
 **Linear tickets:**
+
 - GOO-9: Provision and secure VPS
 - GOO-10: Install and configure n8n
 - GOO-11: Set up PostgreSQL database
 
 **Key concepts to learn:**
+
 - SSH key authentication
 - Linux user management and permissions
 - Firewall configuration (UFW)
@@ -151,6 +164,7 @@
 - Database installation and configuration
 
 **Success criteria:**
+
 - Running VPS accessible via SSH
 - n8n accessible via domain with HTTPS
 - PostgreSQL installed and connectable
@@ -158,6 +172,7 @@
 - Learning notes documented in Linear
 
 **Chat templates to use:**
+
 - 03-vps-setup.md (primary)
 - 05-backend-help.md (if needed)
 - 09-problem-visualisation.md (if concepts unclear)
@@ -170,17 +185,20 @@
 
 **Estimated effort:** 6-8 hours (3-4 sessions)  
 **What you'll complete:**
+
 - Database schema design
 - n8n workflows for all API endpoints
 - Backend fully functional (no hand-coded APIs!)
 
 **Linear tickets:**
+
 - GOO-12: Design and implement database schema
 - GOO-13: Create n8n workflow - Story submission
 - GOO-14: Create n8n workflow - Get stories
 - GOO-15: Create n8n workflow - Learning journal
 
 **Key concepts to learn:**
+
 - Relational database design
 - SQL DDL (schema creation)
 - Indexing strategies
@@ -191,6 +209,7 @@
 - PostgreSQL node in n8n
 
 **Success criteria:**
+
 - Database schema created with proper indexes
 - Story submission workflow working (tested with curl)
 - Get stories workflow with filtering working
@@ -199,6 +218,7 @@
 - API documentation created
 
 **Chat templates to use:**
+
 - 05-backend-help.md (primary)
 - 09-problem-visualisation.md (understanding data flow)
 - 07-strategic-prompting.md (if using Claude Code for function nodes)
@@ -211,6 +231,7 @@
 
 **Estimated effort:** 4-6 hours (2-3 sessions, heavy Claude Code use)  
 **What you'll complete:**
+
 - Next.js project initialised
 - Figma design system
 - Theme switching system
@@ -218,6 +239,7 @@
 - API integration layer
 
 **Linear tickets:**
+
 - GOO-6: Initialise Next.js project with TypeScript and Tailwind
 - GOO-7: Set up Figma design system
 - GOO-8: Implement theme system with CSS variables
@@ -226,6 +248,7 @@
 - GOO-18: Build story submission form
 
 **Key concepts to learn:**
+
 - Next.js 14 app router
 - TypeScript in React
 - Tailwind configuration for theming
@@ -239,6 +262,7 @@
 - Design tokens methodology
 
 **Claude Code usage:**
+
 - Project initialisation and setup
 - Component scaffolding
 - API client boilerplate
@@ -246,6 +270,7 @@
 - TypeScript type definitions
 
 **Success criteria:**
+
 - Next.js app running locally
 - Figma design system created
 - Theme toggle working with persistence
@@ -255,6 +280,7 @@
 - All components responsive and accessible
 
 **Chat templates to use:**
+
 - 04-frontend-help.md (primary)
 - 07-strategic-prompting.md (Claude Code best practices)
 - 01-figjam-coaching.md (if need to visualise component architecture)
@@ -267,17 +293,20 @@
 
 **Estimated effort:** 3-5 hours (2-3 sessions)  
 **What you'll complete:**
+
 - Story feed with real data
 - Filtering functionality
 - Admin moderation panel
 - End-to-end testing
 
 **Linear tickets:**
+
 - GOO-19: Build story feed component
 - GOO-20: Add story filtering by pipeline stage
 - GOO-21: Build admin moderation panel
 
 **Key concepts to learn:**
+
 - Data fetching in Next.js
 - Loading states and skeletons
 - Empty states and error handling
@@ -288,6 +317,7 @@
 - Protected routes
 
 **Success criteria:**
+
 - Story feed displays approved stories
 - Filtering works smoothly
 - Admin panel functional (approve/reject stories)
@@ -297,6 +327,7 @@
 - Performance acceptable
 
 **Chat templates to use:**
+
 - 04-frontend-help.md (components)
 - 05-backend-help.md (admin workflows)
 - 10-challenging-assumptions.md (if stuck)
@@ -309,18 +340,21 @@
 
 **Estimated effort:** 4-6 hours (2-3 sessions)  
 **What you'll complete:**
+
 - Automated release notes
 - Public changelog page
 - Complete documentation
 - Production deployment
 
 **Linear tickets:**
+
 - GOO-22: Set up automated release notes
 - GOO-23: Create changelog page
 - GOO-24: Complete project documentation
 - GOO-25: Deploy to production
 
 **Key concepts to learn:**
+
 - GitHub API integration
 - Linear API usage
 - Claude API for content generation
@@ -330,6 +364,7 @@
 - Documentation best practices
 
 **Success criteria:**
+
 - Release notes workflow functioning
 - Changelog page displaying releases
 - Comprehensive documentation complete
@@ -339,6 +374,7 @@
 - Production testing complete
 
 **Chat templates to use:**
+
 - 05-backend-help.md (n8n automation)
 - 04-frontend-help.md (changelog page)
 - 06-stakeholder-plan.md (launch communication)
@@ -362,6 +398,7 @@
 Set up the base Next.js 14 project with TypeScript, Tailwind CSS, and ESLint/Prettier configuration.
 
 **Acceptance Criteria:**
+
 - Next.js 14 app directory structure
 - TypeScript configured
 - Tailwind CSS installed and working
@@ -371,12 +408,14 @@ Set up the base Next.js 14 project with TypeScript, Tailwind CSS, and ESLint/Pre
 - .env.local with NEXT_PUBLIC_API_URL
 
 **What I'll Learn:**
+
 - Next.js 14 app router setup
 - TypeScript configuration in Next.js
 - Modern frontend tooling and configuration
 - Project structure best practices
 
 **Resources:**
+
 - https://nextjs.org/docs/getting-started
 - https://tailwindcss.com/docs/guides/nextjs
 
@@ -393,6 +432,7 @@ Set up the base Next.js 14 project with TypeScript, Tailwind CSS, and ESLint/Pre
 Create Figma file with design tokens, components, and theme variants following MCP-friendly structure.
 
 **Acceptance Criteria:**
+
 - Design tokens page (colours, typography, spacing)
 - Component library with Auto Layout
 - Light and dark theme variants
@@ -401,6 +441,7 @@ Create Figma file with design tokens, components, and theme variants following M
 - All layers named semantically (no "Rectangle 1")
 
 **What I'll Learn:**
+
 - Figma Auto Layout system
 - Design token methodology
 - Component-driven design
@@ -408,6 +449,7 @@ Create Figma file with design tokens, components, and theme variants following M
 - MCP-optimised file structure
 
 **Resources:**
+
 - Figma Auto Layout documentation
 - Design systems best practices
 
@@ -424,6 +466,7 @@ Create Figma file with design tokens, components, and theme variants following M
 Create theme switching system using CSS variables and React Context, supporting light/dark modes with localStorage persistence.
 
 **Acceptance Criteria:**
+
 - CSS variables for all theme colours
 - Theme toggle component with icon
 - localStorage persistence
@@ -433,6 +476,7 @@ Create theme switching system using CSS variables and React Context, supporting 
 - Works across all components
 
 **What I'll Learn:**
+
 - CSS custom properties (variables)
 - React Context API for global state
 - localStorage browser API
@@ -440,6 +484,7 @@ Create theme switching system using CSS variables and React Context, supporting 
 - Theme architecture patterns
 
 **Resources:**
+
 - https://joshwcomeau.com/react/dark-mode/
 - Tailwind CSS variables guide
 
@@ -456,6 +501,7 @@ Create theme switching system using CSS variables and React Context, supporting 
 Research VPS providers, provision server, and complete initial security setup.
 
 **Acceptance Criteria:**
+
 - VPS provisioned (DigitalOcean/Linode/Vultr)
 - SSH key authentication configured
 - Non-root user created with sudo privileges
@@ -466,6 +512,7 @@ Research VPS providers, provision server, and complete initial security setup.
 - Basic security hardening completed
 
 **What I'll Learn:**
+
 - VPS basics and cloud provider comparison
 - SSH key authentication
 - Linux user management
@@ -474,6 +521,7 @@ Research VPS providers, provision server, and complete initial security setup.
 - Basic Linux command line
 
 **Resources:**
+
 - DigitalOcean initial server setup tutorial
 - SSH security best practices
 - UFW firewall guide
@@ -491,6 +539,7 @@ Research VPS providers, provision server, and complete initial security setup.
 Install n8n on VPS with proper security, SSL certificate, and basic configuration.
 
 **Acceptance Criteria:**
+
 - n8n installed and running
 - Accessible via domain/subdomain (e.g., n8n.yourdomain.com)
 - SSL certificate configured (Let's Encrypt)
@@ -501,6 +550,7 @@ Install n8n on VPS with proper security, SSL certificate, and basic configuratio
 - Nginx reverse proxy configured
 
 **What I'll Learn:**
+
 - Installing Node.js applications on Linux
 - Nginx reverse proxy configuration
 - SSL/TLS certificates with Certbot
@@ -509,6 +559,7 @@ Install n8n on VPS with proper security, SSL certificate, and basic configuratio
 - Webhook basics
 
 **Resources:**
+
 - n8n self-hosting documentation
 - Nginx reverse proxy guide
 - Let's Encrypt/Certbot tutorial
@@ -528,6 +579,7 @@ Install n8n on VPS with proper security, SSL certificate, and basic configuratio
 Install PostgreSQL, configure for n8n and application use, and create initial databases.
 
 **Acceptance Criteria:**
+
 - PostgreSQL installed on VPS
 - Database created: goodsomeday_prod
 - Database user created with proper permissions
@@ -536,6 +588,7 @@ Install PostgreSQL, configure for n8n and application use, and create initial da
 - Test connection successful
 
 **What I'll Learn:**
+
 - PostgreSQL installation and configuration
 - Database user management and permissions
 - Connection strings and security
@@ -543,6 +596,7 @@ Install PostgreSQL, configure for n8n and application use, and create initial da
 - psql command line tool
 
 **Resources:**
+
 - PostgreSQL getting started guide
 - Database security best practices
 
@@ -559,6 +613,7 @@ Install PostgreSQL, configure for n8n and application use, and create initial da
 Design PostgreSQL schema for stories, moderation, and learning journal.
 
 **Acceptance Criteria:**
+
 - stories table created (id, story_text, pipeline_stage, submitted_at, approved, ip_address)
 - learning_journal table created (issue_id, title, what_built, what_learned, challenges, solutions, resources_used, time_estimated, time_actual, difficulty_rating)
 - Proper indexes added for performance
@@ -567,6 +622,7 @@ Design PostgreSQL schema for stories, moderation, and learning journal.
 - Seed data added for testing
 
 **What I'll Learn:**
+
 - Relational database design
 - SQL DDL statements
 - Indexing strategies
@@ -575,6 +631,7 @@ Design PostgreSQL schema for stories, moderation, and learning journal.
 - Schema documentation
 
 **Resources:**
+
 - PostgreSQL schema design guide
 - Database indexing best practices
 
@@ -591,6 +648,7 @@ Design PostgreSQL schema for stories, moderation, and learning journal.
 Build n8n workflow to handle story submissions from frontend with validation and database storage.
 
 **Acceptance Criteria:**
+
 - Webhook endpoint created: /webhook/submit-story
 - Data validation node (story text length, pipeline stage)
 - Save to PostgreSQL stories table
@@ -599,6 +657,7 @@ Build n8n workflow to handle story submissions from frontend with validation and
 - Workflow tested with curl
 
 **What I'll Learn:**
+
 - n8n workflow basics
 - Webhook configuration and testing
 - Data validation patterns
@@ -607,6 +666,7 @@ Build n8n workflow to handle story submissions from frontend with validation and
 - REST API response formats
 
 **Resources:**
+
 - n8n webhook documentation
 - n8n PostgreSQL node docs
 
@@ -623,6 +683,7 @@ Build n8n workflow to handle story submissions from frontend with validation and
 Build n8n workflow to fetch approved stories with optional filtering by pipeline stage.
 
 **Acceptance Criteria:**
+
 - Webhook endpoint created: /webhook/get-stories
 - Query PostgreSQL with filters (stage, limit)
 - Return formatted JSON response
@@ -632,6 +693,7 @@ Build n8n workflow to fetch approved stories with optional filtering by pipeline
 - Workflow tested with different filters
 
 **What I'll Learn:**
+
 - SQL SELECT queries with WHERE clauses
 - Query parameters and filtering
 - API response formatting
@@ -639,6 +701,7 @@ Build n8n workflow to fetch approved stories with optional filtering by pipeline
 - n8n data transformation
 
 **Resources:**
+
 - PostgreSQL SELECT documentation
 - REST API design patterns
 
@@ -655,6 +718,7 @@ Build n8n workflow to fetch approved stories with optional filtering by pipeline
 Build n8n workflow to record learning data when Linear issues are completed.
 
 **Acceptance Criteria:**
+
 - Webhook endpoint created: /webhook/learning-journal
 - Accepts Linear issue data
 - Parses learning fields (what_built, what_learned, challenges, solutions)
@@ -664,6 +728,7 @@ Build n8n workflow to record learning data when Linear issues are completed.
 - Workflow tested with sample data
 
 **What I'll Learn:**
+
 - Webhook payload parsing
 - Upsert operations (INSERT ... ON CONFLICT)
 - JSON data handling
@@ -671,6 +736,7 @@ Build n8n workflow to record learning data when Linear issues are completed.
 - Data transformation logic
 
 **Resources:**
+
 - PostgreSQL UPSERT documentation
 - n8n Function node examples
 
@@ -689,6 +755,7 @@ Build n8n workflow to record learning data when Linear issues are completed.
 Create React component for displaying submitted stories, matching Figma design.
 
 **Acceptance Criteria:**
+
 - Displays story text
 - Shows pipeline stage badge with colour coding
 - Timestamp formatting (relative time: "2 hours ago")
@@ -699,6 +766,7 @@ Create React component for displaying submitted stories, matching Figma design.
 - Hover effects and transitions
 
 **What I'll Learn:**
+
 - React component design patterns
 - TypeScript prop typing
 - Tailwind responsive design
@@ -707,6 +775,7 @@ Create React component for displaying submitted stories, matching Figma design.
 - Accessibility best practices
 
 **Resources:**
+
 - React component patterns
 - date-fns documentation
 - Figma StoryCard design
@@ -724,6 +793,7 @@ Create React component for displaying submitted stories, matching Figma design.
 Build API client layer with fetch wrapper functions and React hooks for data fetching.
 
 **Acceptance Criteria:**
+
 - API client in src/lib/api.ts with error handling
 - submitStory() function
 - getStories() function with filters
@@ -734,6 +804,7 @@ Build API client layer with fetch wrapper functions and React hooks for data fet
 - Proper error messages
 
 **What I'll Learn:**
+
 - Fetch API usage and configuration
 - Custom React hooks creation
 - Error handling patterns
@@ -742,6 +813,7 @@ Build API client layer with fetch wrapper functions and React hooks for data fet
 - Environment variables in Next.js
 
 **Resources:**
+
 - React hooks documentation
 - fetch API guide
 - TypeScript generics
@@ -759,6 +831,7 @@ Build API client layer with fetch wrapper functions and React hooks for data fet
 Create form for submitting stories with validation and API integration.
 
 **Acceptance Criteria:**
+
 - Textarea for story input
 - Dropdown for pipeline stage selection
 - Client-side validation (50-5000 characters)
@@ -770,6 +843,7 @@ Create form for submitting stories with validation and API integration.
 - Accessible (ARIA labels, keyboard navigation)
 
 **What I'll Learn:**
+
 - Form handling in React
 - Client-side validation techniques
 - API integration from frontend
@@ -778,6 +852,7 @@ Create form for submitting stories with validation and API integration.
 - User feedback patterns
 
 **Resources:**
+
 - React forms best practices
 - Form accessibility guide
 
@@ -794,6 +869,7 @@ Create form for submitting stories with validation and API integration.
 Display grid/list of submitted stories fetched from backend API.
 
 **Acceptance Criteria:**
+
 - Fetches stories using useStories hook
 - Grid layout (responsive: 1/2/3 columns)
 - Loading skeleton components
@@ -804,6 +880,7 @@ Display grid/list of submitted stories fetched from backend API.
 - Auto-refresh on new submission
 
 **What I'll Learn:**
+
 - Data fetching in Next.js
 - useEffect and async operations
 - Loading states and skeletons
@@ -812,6 +889,7 @@ Display grid/list of submitted stories fetched from backend API.
 - Component reusability
 
 **Resources:**
+
 - Next.js data fetching
 - Skeleton loading patterns
 
@@ -828,6 +906,7 @@ Display grid/list of submitted stories fetched from backend API.
 Allow users to filter stories by pipeline stage (All, High School, University, Mid Career).
 
 **Acceptance Criteria:**
+
 - Filter UI component (button group or tabs)
 - Active state styling for selected filter
 - Updates URL params when filter changes
@@ -837,6 +916,7 @@ Allow users to filter stories by pipeline stage (All, High School, University, M
 - Smooth transitions between filtered views
 
 **What I'll Learn:**
+
 - URL parameters in Next.js
 - Query string management
 - Filtering UX patterns
@@ -844,6 +924,7 @@ Allow users to filter stories by pipeline stage (All, High School, University, M
 - Next.js routing
 
 **Resources:**
+
 - Next.js routing and params
 - URL state management
 
@@ -862,6 +943,7 @@ Allow users to filter stories by pipeline stage (All, High School, University, M
 Create password-protected admin interface for moderating story submissions.
 
 **Acceptance Criteria:**
+
 - Simple password protection (env variable)
 - List all pending (unapproved) stories
 - Approve button (green) per story
@@ -873,6 +955,7 @@ Create password-protected admin interface for moderating story submissions.
 - Admin route at /admin
 
 **What I'll Learn:**
+
 - Basic authentication patterns
 - Admin interface design
 - State management for lists
@@ -881,6 +964,7 @@ Create password-protected admin interface for moderating story submissions.
 - CRUD operations from frontend
 
 **Resources:**
+
 - Next.js authentication patterns
 - Admin UI best practices
 
@@ -899,6 +983,7 @@ Create password-protected admin interface for moderating story submissions.
 Create n8n workflow to generate release notes from Linear + GitHub data using Claude API.
 
 **Acceptance Criteria:**
+
 - n8n workflow triggered on git tag creation
 - Fetches Linear issues closed since last release
 - Fetches commits and PRs from GitHub
@@ -909,6 +994,7 @@ Create n8n workflow to generate release notes from Linear + GitHub data using Cl
 - Sends notification on completion
 
 **What I'll Learn:**
+
 - GitHub API integration
 - Linear API usage
 - Claude API for content generation
@@ -917,6 +1003,7 @@ Create n8n workflow to generate release notes from Linear + GitHub data using Cl
 - Multi-format documentation
 
 **Resources:**
+
 - GitHub API documentation
 - Linear API docs
 - Anthropic API documentation
@@ -934,6 +1021,7 @@ Create n8n workflow to generate release notes from Linear + GitHub data using Cl
 Build public-facing changelog page displaying all releases and updates.
 
 **Acceptance Criteria:**
+
 - Route at /changelog
 - Fetches releases from GitHub API
 - Timeline/list format display
@@ -944,6 +1032,7 @@ Build public-facing changelog page displaying all releases and updates.
 - Responsive layout
 
 **What I'll Learn:**
+
 - GitHub API integration from frontend
 - Timeline UI patterns
 - Markdown rendering
@@ -951,6 +1040,7 @@ Build public-facing changelog page displaying all releases and updates.
 - Public API consumption
 
 **Resources:**
+
 - GitHub Releases API
 - Timeline UI patterns
 
@@ -967,6 +1057,7 @@ Build public-facing changelog page displaying all releases and updates.
 Write comprehensive documentation for the project including setup, architecture, and learning journey.
 
 **Acceptance Criteria:**
+
 - README.md updated with screenshots, setup instructions, architecture
 - docs/ARCHITECTURE.md created (system design, data flow)
 - docs/SETUP.md created (step-by-step setup guide)
@@ -977,6 +1068,7 @@ Write comprehensive documentation for the project including setup, architecture,
 - Code comments added to complex functions
 
 **What I'll Learn:**
+
 - Technical documentation writing
 - Architecture diagrams (ASCII art)
 - API documentation standards
@@ -984,6 +1076,7 @@ Write comprehensive documentation for the project including setup, architecture,
 - Documentation-driven development
 
 **Resources:**
+
 - Documentation best practices
 - Markdown guide
 - API documentation examples
@@ -1001,6 +1094,7 @@ Write comprehensive documentation for the project including setup, architecture,
 Deploy Next.js frontend to Vercel and configure production environment.
 
 **Acceptance Criteria:**
+
 - Deployed to Vercel
 - Environment variables configured
 - Custom domain connected (if available)
@@ -1012,6 +1106,7 @@ Deploy Next.js frontend to Vercel and configure production environment.
 - Performance check passed
 
 **What I'll Learn:**
+
 - Vercel deployment process
 - Production environment configuration
 - DNS and domain management
@@ -1020,6 +1115,7 @@ Deploy Next.js frontend to Vercel and configure production environment.
 - Performance optimisation
 
 **Resources:**
+
 - Vercel deployment guide
 - Next.js production checklist
 - Environment variables in Vercel
@@ -1079,6 +1175,7 @@ git pull origin main
 ```
 
 **Types:**
+
 - `feat` - New feature
 - `fix` - Bug fix
 - `docs` - Documentation only
@@ -1140,6 +1237,7 @@ alias ghprs="gh pr status"
 **00-daily-activation-trigger.md** - Interactive morning ritual system
 
 This is your primary entry point each day. When starting work:
+
 - Say "Run my daily activation" or "DAP" to Claude in a fresh chat
 - Claude asks 3 quick questions about your state (emoji, what's true, time available)
 - Based on your responses, suggests one of 4 versions
@@ -1147,12 +1245,14 @@ This is your primary entry point each day. When starting work:
 - Launches you into 20 minutes of focused work
 
 **The 4 versions available:**
+
 - **13a-version1-essential-three.md** (2-3 min) - Fast structure when scattered
 - **13b-version2-flexible-six.md** (3-5 min) - Choose 3 questions that resonate
 - **13c-version3-one-question.md** (30-60 sec) - Single unlock when stuck
 - **13d-full-version.md** (5-10 min) - Deep reflection when you have time
 
 **What you're learning:**
+
 - Motivational interviewing techniques
 - Cognitive science for task initiation
 - Arousal regulation strategies
@@ -1162,10 +1262,10 @@ This is your primary entry point each day. When starting work:
 
 **Use this system daily** to connect values to action and overcome starting friction.
 
-
 ### Other Templates & When to Use Each Template
 
 **00-daily-activation-trigger.md (+ versions 13a-13d)**
+
 - Every morning before starting work
 - When you can't decide what to work on
 - Feeling scattered or resistant to starting
@@ -1174,12 +1274,14 @@ This is your primary entry point each day. When starting work:
 - Use in a fresh Claude chat, say "Run my daily activation"
 
 **Specific versions:**
+
 - 13a (Essential Three): Normal starting friction, 2-3 min available
 - 13b (Flexible Six): Want autonomy, medium energy, 3-5 min
 - 13c (One Question): Very stuck, anxious, or only 30 sec available
 - 13d (Full Version): Open to deep reflection, 5-10 min available
 
 **01-figjam-coaching.md**
+
 - Reviewing technical concepts visually
 - Mapping architecture or data flow
 - Building mental models
@@ -1187,12 +1289,14 @@ This is your primary entry point each day. When starting work:
 - Use at start of each milestone
 
 **02-weekly-summary.md**
+
 - End of week reflections
 - Progress tracking
 - Planning next week
 - Celebrating wins, acknowledging challenges
 
 **03-vps-setup.md**
+
 - Server provisioning help
 - Security configuration
 - SSH troubleshooting
@@ -1200,6 +1304,7 @@ This is your primary entry point each day. When starting work:
 - Milestone 2 primary template
 
 **04-frontend-help.md**
+
 - React component questions
 - Next.js patterns
 - TypeScript issues
@@ -1207,6 +1312,7 @@ This is your primary entry point each day. When starting work:
 - Milestone 4 & 5 primary template
 
 **05-backend-help.md**
+
 - n8n workflow help
 - PostgreSQL questions
 - Database schema design
@@ -1214,6 +1320,7 @@ This is your primary entry point each day. When starting work:
 - Milestone 2 & 3 primary template
 
 **06-stakeholder-plan.md**
+
 - Preparing presentations
 - Communicating with mentors
 - Portfolio explanations
@@ -1221,6 +1328,7 @@ This is your primary entry point each day. When starting work:
 - Use before major sharing
 
 **07-strategic-prompting.md**
+
 - Improving Claude Code usage
 - Better AI assistance
 - Context management
@@ -1228,6 +1336,7 @@ This is your primary entry point each day. When starting work:
 - Use throughout, especially Milestone 4
 
 **08-empathetic-leadership.md**
+
 - Navigating feedback
 - Communication challenges
 - Asking for help
@@ -1235,6 +1344,7 @@ This is your primary entry point each day. When starting work:
 - Use as needed for people issues
 
 **09-problem-visualisation.md**
+
 - Understanding complex concepts
 - Building mental models
 - Seeing system architecture
@@ -1242,6 +1352,7 @@ This is your primary entry point each day. When starting work:
 - Use when stuck conceptually
 
 **10-challenging-assumptions.md**
+
 - Debugging your thinking
 - Stuck and don't know why
 - Questioning your approach
@@ -1249,6 +1360,7 @@ This is your primary entry point each day. When starting work:
 - After each milestone review
 
 **11-wellbeing-checkin.md**
+
 - Feeling overwhelmed
 - Burnout signs
 - Need to adjust pace
@@ -1256,6 +1368,7 @@ This is your primary entry point each day. When starting work:
 - Use proactively, not just when struggling
 
 **12-confident-humility.md**
+
 - Imposter syndrome
 - Sharing work anxiety
 - Balancing confidence and openness
@@ -1272,33 +1385,38 @@ This is your primary entry point each day. When starting work:
    - Record actual time vs estimated
 
 2. **Update docs/progress.md:**
+
    ```markdown
    ## Milestone 2: Infrastructure (Complete)
-   
+
    **Completed:** [date]
    **Estimated effort:** 6-8 hours
    **Actual effort:** 7.5 hours
    **Tickets closed:** GOO-9, GOO-10, GOO-11
-   
+
    ### What I Built
+
    - VPS running and secured
    - n8n accessible with SSL
    - PostgreSQL configured
-   
+
    ### What I Learned
+
    - SSH key authentication process
    - Nginx reverse proxy configuration
    - Linux user permissions
-   
+
    ### Challenges
+
    - UFW firewall blocked n8n initially
    - SSL certificate renewal setup
-   
+
    ### Resources Used
+
    - DigitalOcean tutorials
    - n8n documentation
    - Chat template: 03-vps-setup.md
-   
+
    **Progress:** 2/6 milestones (33%)
    ```
 
@@ -1380,6 +1498,7 @@ This is your primary entry point each day. When starting work:
 ### Linear Milestones
 
 Create 6 milestones in Linear:
+
 1. Foundation
 2. Infrastructure
 3. Visual Backend
@@ -1405,21 +1524,25 @@ Track weekly progress:
 **Progress:** 17%
 
 ### Completed
+
 - [x] Milestone 1: Foundation (5.5 hours)
 - [ ] Milestone 2: Infrastructure (in progress)
 
 ### This Week's Learnings
+
 - Professional Git workflow
 - Linear + GitHub integration
 - Template-based communication
 - VPS security basics (in progress)
 
 ### Challenges
+
 - Fish shell syntax confusion (resolved)
 - Git commit amend issues (learned)
 - UFW firewall blocking n8n (troubleshooting)
 
 ### Next Week Plan
+
 - Complete Milestone 2
 - Start Milestone 3
 - First n8n workflows
@@ -1434,24 +1557,30 @@ Track weekly progress:
 ### Social Sharing Schedule
 
 **After Milestone 1 (Foundation):**
+
 - Optional: Brief "starting the journey" post
 
 **After Milestone 2 (Infrastructure):**
+
 - LinkedIn newsletter: "Visual learner's approach to backend"
 - Share VPS setup experience
 
 **After Milestone 3 (Visual Backend):**
+
 - LinkedIn post: "Building APIs without coding APIs"
 - n8n workflow screenshots
 
 **After Milestone 4 (Frontend):**
+
 - LinkedIn post: "Claude Code + Figma = frontend speed"
 - Component demos
 
 **After Milestone 5 (Integration):**
+
 - Optional: "Halfway reflection" post
 
 **After Milestone 6 (Launch):**
+
 - LinkedIn newsletter: Complete journey reflection
 - Substack article: "Learning just enough backend to never do it manually"
 - Product Hunt launch (optional)
@@ -1554,24 +1683,28 @@ goodsomeday/
 ## Key Mantras
 
 **Learning Focus:**
+
 - "Tools adapt to humans, not the other way around"
 - "Learning just enough backend to never do it manually again"
 - "Visual workflows, AI assistance, focus on strengths"
 - "The real goal is design systems, not database optimisation"
 
 **Wellbeing:**
+
 - "Sustainable pace beats rushed completion"
 - "2-3 hours max, then stop"
 - "Rest is productive"
 - "Stuck for 30 min? Use a chat template"
 
 **Building in Public:**
+
 - "Document the journey, not just the destination"
 - "Failures are data, share them"
 - "Authentic over polished"
 - "Help others learn by showing your process"
 
 **Professional Practice:**
+
 - "Feature branch → PR → review → merge"
 - "Commit messages explain why, not just what"
 - "Self-review catches bugs before others see them"
@@ -1645,9 +1778,10 @@ You need to adjust if:
 **Tickets closed:** 0/20  
 **Next milestone:** Infrastructure  
 **Next ticket:** GOO-9 (Provision and secure VPS)  
-**Chat template to use:** 03-vps-setup.md  
+**Chat template to use:** 03-vps-setup.md
 
 **Foundation work complete:**
+
 - Linear configured with milestones
 - 20 tickets created and assigned
 - GitHub repository ready
@@ -1659,5 +1793,5 @@ You need to adjust if:
 
 ---
 
-*Document last updated: After Milestone 1*  
-*Australian English | Visual-First Approach | AI-Assisted Development | Building in Public*
+_Document last updated: After Milestone 1_  
+_Australian English | Visual-First Approach | AI-Assisted Development | Building in Public_

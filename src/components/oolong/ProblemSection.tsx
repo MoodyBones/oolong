@@ -7,7 +7,7 @@ export function ProblemSection() {
         <h2 className="text-3xl md:text-5xl font-bold mb-8">
           The LinkedIn Persona doesn&apos;t work for non-linear careers.
         </h2>
-        
+
         <div className="mb-12">
           <p className="text-lg mb-4">The standard job application assumes you:</p>
           <ul className="text-lg space-y-2 ml-6 list-disc marker:text-black dark:marker:text-white">
@@ -37,9 +37,7 @@ export function ProblemSection() {
             <div className="font-mono text-sm mb-3">
               <span className="text-[#F9D762]">Barrier</span> → Action → Transformation
             </div>
-            <p className="text-base">
-              &quot;Managed 30 staff. Solved X problem. Result: Y.&quot;
-            </p>
+            <p className="text-base">&quot;Managed 30 staff. Solved X problem. Result: Y.&quot;</p>
           </Card>
         </div>
       </div>

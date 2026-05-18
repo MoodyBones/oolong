@@ -7,15 +7,15 @@ export function BridgeToSteepSection() {
         <h2 className="text-3xl md:text-5xl font-bold mb-8">
           Stories become portfolio evidence. Evidence becomes job matches.
         </h2>
-        
+
         <div className="mb-12">
-          <FlowDiagram 
+          <FlowDiagram
             steps={[
               '1. Submit Story on Oolong',
               '2. Convert to Steep Project',
               '3. AI Analyzes: What skill? What result? What context?',
               '4. Builds Grounded Profile (No LinkedIn Fluff)',
-              '5. Matches to Jobs That Fit How You Work'
+              '5. Matches to Jobs That Fit How You Work',
             ]}
             vertical
             className="max-w-[600px]"
@@ -30,13 +30,13 @@ export function BridgeToSteepSection() {
             <li>What you won&apos;t compromise on</li>
           </ul>
           <p>
-            Steep uses this to build a profile that strips the &quot;passionate team player&quot; 
+            Steep uses this to build a profile that strips the &quot;passionate team player&quot;
             nonsense and surfaces what you&apos;ve actually done.
           </p>
         </div>
 
         <div className="flex justify-center">
-          <a 
+          <a
             href="https://curate-company-content.netlify.app"
             target="_blank"
             rel="noopener noreferrer"

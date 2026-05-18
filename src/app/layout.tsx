@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "Oolong - Clinical archive of career barriers and transformations",
-  description: "Document what happened. Turn barriers into evidence. Build a profile that matches how you actually work.",
+  title: 'Oolong - Clinical archive of career barriers and transformations',
+  description:
+    'Document what happened. Turn barriers into evidence. Build a profile that matches how you actually work.',
 };
 
 export default function RootLayout({

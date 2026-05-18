@@ -12,12 +12,14 @@
 Initialized the frontend foundation for Goodsomeday:
 
 **Next.js 14 Setup:**
+
 - App Router (modern routing)
 - TypeScript with strict mode
 - Tailwind CSS v4 (latest version)
 - Clean project structure
 
 **Project Structure:**
+
 ```
 src/
 ├── app/
@@ -35,12 +37,14 @@ src/
 ```
 
 **Design System Configured:**
+
 - Colors: Black, Golden Yellow (#F9D762), White, Grey
 - Spacing: 8px base system (4px, 8px, 16px, 24px, 32px, 48px)
 - Typography: 72px hero, 48px section, 28px sub, 16px body
 - Layout dimensions: 240px sidebar, 840px content, 1200px page max
 
 **Files Created:**
+
 - `next.config.ts` - Next.js configuration
 - `tsconfig.json` - TypeScript configuration
 - `package.json` - Dependencies and scripts
@@ -58,23 +62,25 @@ src/
 **The biggest surprise:** Tailwind v4 removed `tailwind.config.ts` entirely.
 
 **Old way (v3):**
+
 ```typescript
 // tailwind.config.ts
 export default {
   theme: {
     extend: {
       colors: {
-        secondary: "#F9D762"
-      }
-    }
-  }
-}
+        secondary: '#F9D762',
+      },
+    },
+  },
+};
 ```
 
 **New way (v4):**
+
 ```css
 /* globals.css */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-secondary: #f9d762;
@@ -82,6 +88,7 @@ export default {
 ```
 
 **Why it matters:**
+
 - Simpler setup (no config file)
 - Design tokens live with CSS (more natural)
 - Faster build times (new engine)
@@ -96,12 +103,14 @@ export default {
 I'm using **App Router** (not Pages Router).
 
 **Key differences:**
+
 - `src/app/` instead of `src/pages/`
 - `layout.tsx` for shared layouts (not `_app.tsx`)
 - Server Components by default (faster!)
 - `page.tsx` for routes (not `index.tsx`)
 
 **Why App Router:**
+
 - It's the future of Next.js
 - Better performance (server components)
 - Simpler layouts (no wrapper hell)
@@ -114,6 +123,7 @@ I'm using **App Router** (not Pages Router).
 **Challenge:** Couldn't run `create-next-app` in existing directory.
 
 **Solution:** Manual initialization:
+
 1. `npm init -y` to create package.json
 2. Install dependencies manually
 3. Create config files (`next.config.ts`, `tsconfig.json`)
@@ -145,11 +155,13 @@ Instead of abstract token names, I used **semantic dimensions**:
 ### 5. Claude Code + Context Primer Works
 
 **I gave Claude Code:**
+
 - Foundation.md (my learning approach)
 - Visual design mapping (Figma specs)
 - Strategic build plan (high-level tasks)
 
 **Result:**
+
 - It skipped tutorial mode
 - Executed fast
 - Made decisions aligned with my approach
@@ -166,6 +178,7 @@ Instead of abstract token names, I used **semantic dimensions**:
 **Problem:** Tried to run `npx tailwindcss init` but it doesn't exist in v4.
 
 **How I solved it:**
+
 - Checked `npm list tailwindcss` → saw v4.1.16
 - Realized v4 is fundamentally different
 - Created `globals.css` with `@theme` syntax
@@ -180,6 +193,7 @@ Instead of abstract token names, I used **semantic dimensions**:
 **Problem:** `create-next-app` won't initialize in existing directory.
 
 **How I solved it:**
+
 - Installed dependencies manually
 - Created config files from scratch
 - Built folder structure myself
@@ -195,6 +209,7 @@ Instead of abstract token names, I used **semantic dimensions**:
 **Decision:** Arbitrary values for now (`bg-[#F9D762]`, `text-[72px]`).
 
 **Why:**
+
 - Explicit (no lookup needed)
 - Matches Figma specs exactly
 - Can refactor to tokens later if needed
@@ -209,12 +224,14 @@ Instead of abstract token names, I used **semantic dimensions**:
 ### Decision 1: Tailwind v4 (Not Downgrade to v3)
 
 **Options:**
+
 - Downgrade to v3 (familiar, has config file)
 - Use v4 (new, different syntax)
 
 **Chose:** v4
 
 **Why:**
+
 - Future-proof (v3 is being phased out)
 - Simpler (no config file)
 - Faster (new engine)
@@ -227,12 +244,14 @@ Instead of abstract token names, I used **semantic dimensions**:
 ### Decision 2: Arbitrary Values Over Named Tokens
 
 **Options:**
+
 - Create token names: `bg-secondary`, `text-hero`
 - Use arbitrary values: `bg-[#F9D762]`, `text-[72px]`
 
 **Chose:** Arbitrary values
 
 **Why:**
+
 - Explicit and readable
 - Matches Figma specs 1:1
 - No abstraction layer needed yet
@@ -243,12 +262,14 @@ Instead of abstract token names, I used **semantic dimensions**:
 ### Decision 3: Strict TypeScript Mode
 
 **Options:**
+
 - Loose TypeScript (easier, fewer errors)
 - Strict TypeScript (safer, catches bugs early)
 
 **Chose:** Strict
 
 **Why:**
+
 - Learn proper TypeScript patterns
 - Catch bugs at compile time
 - Better autocomplete
@@ -261,16 +282,19 @@ Instead of abstract token names, I used **semantic dimensions**:
 ## What's Next
 
 **Immediate next (GOO-7):**
+
 - Set up Figma design system
 - Document component specs
 - Prepare assets (images, icons)
 
 **Then (GOO-8):**
+
 - Implement theme toggle (light/dark)
 - Add ThemeProvider context
 - Test theme persistence
 
 **After that (GOO-16):**
+
 - Build StoryCard component
 - Create mock data structure
 - Test with sample stories
@@ -280,16 +304,19 @@ Instead of abstract token names, I used **semantic dimensions**:
 ## Resources Used
 
 **Documentation:**
+
 - [Next.js 14 App Router Docs](https://nextjs.org/docs)
 - [Tailwind CSS v4 Beta](https://tailwindcss.com/docs/v4-beta)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 
 **Project Docs:**
+
 - `docs/learning-resources/foundation.md` - My learning approach
 - `docs/learning-resources/chat-templates/frontend/visual-design-mapping.md` - Figma specs
 - `docs/learning-resources/chat-templates/frontend/strategic-build-plan.md` - High-level plan
 
 **Created:**
+
 - `docs/learning-resources/chat-templates/frontend/tailwind-v4-update.md` - v4 migration guide
 
 ---
@@ -325,6 +352,7 @@ Instead of abstract token names, I used **semantic dimensions**:
 ## Metrics
 
 **Time breakdown:**
+
 - Research/decisions: 15 min (Tailwind v4 vs v3)
 - Setup/install: 10 min (manual initialization)
 - Configuration: 10 min (design tokens, TypeScript)
@@ -332,6 +360,7 @@ Instead of abstract token names, I used **semantic dimensions**:
 - Documentation: 20 min (this doc + Tailwind v4 guide)
 
 **Commits:** 2
+
 1. `feat(GOO-6): initialize Next.js 14 with Tailwind v4`
 2. `docs(GOO-6): add Tailwind v4 migration guide`
 
@@ -339,4 +368,4 @@ Instead of abstract token names, I used **semantic dimensions**:
 
 ---
 
-*Next ticket: GOO-7 - Set up Figma design system*
+_Next ticket: GOO-7 - Set up Figma design system_

@@ -52,6 +52,7 @@ crontab -e
 ## Backup Retention
 
 **Recommended:**
+
 - Keep daily backups for 7 days
 - Keep weekly backups for 4 weeks
 - Keep monthly backups for 6 months
@@ -72,22 +73,25 @@ crontab -e
 ## Quick Reference
 
 **Create backup:**
+
 ```bash
 mkdir -p ~/backups
 sudo -u postgres pg_dump goodsomeday_prod > ~/backups/backup_$(date +%Y%m%d).sql
 ```
 
 **List backups:**
+
 ```bash
 ls -lh ~/backups/
 ```
 
 **Restore backup:**
+
 ```bash
 sudo -u postgres psql goodsomeday_prod < ~/backups/backup_YYYYMMDD.sql
 ```
 
 ---
 
-*Last updated: 2025-10-18*
-*Related: GOO-11 - Set up PostgreSQL database*
+_Last updated: 2025-10-18_
+_Related: GOO-11 - Set up PostgreSQL database_

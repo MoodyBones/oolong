@@ -11,6 +11,7 @@
 **Scenario:** A developer suggests splitting `story_text` into separate fields: `barrier`, `reflection`, `action`, `transformation`.
 
 Explain why you designed it differently:
+
 1. Why one `story_text` field instead of four separate fields?
 2. How does the frontend guide users to follow the transformation arc if the backend doesn't enforce it structurally?
 3. You included `current_status` (stayed/left tech) but not as a required field. Why is it optional? What safeguards did you build in?
@@ -25,6 +26,7 @@ Explain why you designed it differently:
 **Scenario:** A story submission fails with "violates check constraint stories_story_text_check".
 
 Debug without looking:
+
 1. What are the three check constraints on the `stories` table? What does each one validate?
 2. The seed data initially failed. What was the problem and how did you fix it?
 3. Why set a minimum of 100 characters for stories? Why a maximum of 5000?
@@ -39,6 +41,7 @@ Debug without looking:
 **Scenario:** You're explaining to your future self (in 6 months) why you added specific indexes.
 
 Recall without looking:
+
 1. What three indexes did you create on the `stories` table? What query pattern does each one optimize?
 2. The `idx_stories_approved` has a `WHERE approved = TRUE` clause. What is this called and why is it better than indexing all rows?
 3. You indexed `submitted_at DESC` (descending). Why DESC? What does that optimize?
@@ -53,6 +56,7 @@ Recall without looking:
 **Scenario:** You're reviewing what you built and thinking about future enhancements.
 
 Reflect on the design:
+
 1. The `learning_journal` table tracks your learning from Linear tickets. What fields capture "what went wrong" vs "what you learned"?
 2. You included `time_estimated` and `time_actual`. Why track both? What pattern might emerge over time?
 3. The `difficulty_rating` is 1-5. After completing GOO-9 (VPS), GOO-10 (n8n), GOO-11 (PostgreSQL), and now GOO-12 (schema) - which was hardest? Does that match what you estimated?
@@ -65,11 +69,13 @@ Reflect on the design:
 ## Self-Assessment
 
 After answering, rate yourself:
+
 - ✅ **Confident:** Could explain to someone else
 - 🤔 **Partial:** Got the concept but missed details
 - ❌ **Unclear:** Need to review the material
 
 **Review schedule:**
+
 - First review: Tomorrow (24 hours)
 - Second review: 3 days after completion
 - Third review: 1 week after completion
@@ -81,23 +87,18 @@ After answering, rate yourself:
 
 Use this space to write down what you learned from attempting these questions:
 
-**What I understood well:**
--
+## **What I understood well:**
 
-**What I need to review:**
--
+## **What I need to review:**
 
-**Aha moments from this ticket:**
--
+## **Aha moments from this ticket:**
 
-**How this connects to product vision:**
--
+## **How this connects to product vision:**
 
-**Resources to check:**
--
+## **Resources to check:**
 
 ---
 
-*Created: 2025-10-20*
-*Ticket: GOO-12 - Design and implement database schema*
-*Related docs: schema-design-philosophy.md, schema.sql, seed-data.sql*
+_Created: 2025-10-20_
+_Ticket: GOO-12 - Design and implement database schema_
+_Related docs: schema-design-philosophy.md, schema.sql, seed-data.sql_

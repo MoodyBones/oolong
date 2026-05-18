@@ -4,10 +4,8 @@ export function FinalCTASection() {
   return (
     <section id="submit-story" className="py-16 md:py-24 px-6">
       <div className="max-w-[800px] mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-8">
-          Add your data point.
-        </h2>
-        
+        <h2 className="text-3xl md:text-5xl font-bold mb-8">Add your data point.</h2>
+
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mb-8">
           <Button variant="primary" href="/submit" className="text-lg">
             Submit Your Story
@@ -15,8 +13,8 @@ export function FinalCTASection() {
         </div>
 
         <div className="text-center mb-6">
-          <a 
-            href="https://curate-company-content.netlify.app" 
+          <a
+            href="https://curate-company-content.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg underline hover:text-[#666666]"
@@ -26,8 +24,8 @@ export function FinalCTASection() {
         </div>
 
         <p className="text-base text-[#666666] max-w-[600px] mx-auto">
-          Stories are anonymous unless you choose otherwise. We aggregate patterns, 
-          not personal details. Add your data point to document systemic career barriers.
+          Stories are anonymous unless you choose otherwise. We aggregate patterns, not personal
+          details. Add your data point to document systemic career barriers.
         </p>
       </div>
     </section>

@@ -53,6 +53,7 @@ This activation system isn't arbitrary - it's built on research-backed approache
 **What it is:** A counselling approach that uses open-ended questions to help people discover their own motivations rather than being told what to do.
 
 **How we use it:**
+
 - **Open-ended questions:** "What part lights you up?" (not "Do you like frontend?")
 - **Reflective listening:** Claude mirrors back what you say to help you hear yourself
 - **Autonomy support:** You choose the version, the task, the approach
@@ -61,6 +62,7 @@ This activation system isn't arbitrary - it's built on research-backed approache
 **Why it works:** Self-persuasion is more powerful than external pressure. When you articulate your own reasons, your brain commits more fully.
 
 **In the versions:**
+
 - Version 1: "What do I feel like working on?" = MI's autonomy support
 - Version 3: You choose which question = MI's collaboration
 - All versions: You name your own motivation = MI's evocation
@@ -74,18 +76,21 @@ This activation system isn't arbitrary - it's built on research-backed approache
 **What it is:** Research on how the brain overcomes the "starting barrier" - the gap between intention and action.
 
 **Key findings:**
+
 - **Specificity reduces activation energy:** "Open VS Code" is easier to start than "work on project"
 - **Micro-commitments lower threat:** 20 minutes feels safe, "finish the feature" feels threatening
 - **Curiosity beats discipline:** Genuine interest creates sustainable motivation
 - **Implementation intentions work:** "When X, then Y" structure increases follow-through
 
 **How we use it:**
+
 - Land on ONE tiny physical action (not vague goal)
 - 20-minute commitment (reduces overwhelm)
 - Connect to curiosity/interest (Version 1: "What lights you up?")
 - Clear trigger-action: "Set timer → Start [specific thing]"
 
 **In the versions:**
+
 - "What's the tiniest physical action?" = Reducing activation energy
 - "Set 20-minute timer" = Micro-commitment
 - "What do I feel like doing?" = Curiosity-first
@@ -100,8 +105,10 @@ This activation system isn't arbitrary - it's built on research-backed approache
 
 **The arousal curve:**
 ```
+
 Low arousal (😴) ← Optimal zone (⚡) → High arousal (😰)
-    Under-stimulated      Engaged        Over-stimulated
+Under-stimulated Engaged Over-stimulated
+
 ```
 
 **Different states need different approaches:**
@@ -641,7 +648,7 @@ When user triggers, remember:
 ✅ **Project-specific** (understands Goodsomeday)  
 ✅ **User-aware** (knows Mel's patterns and values)  
 ✅ **Robust decision logic** (clear matrix for suggestions)  
-✅ **Override-friendly** (user stays in control)  
+✅ **Override-friendly** (user stays in control)
 
 ---
 

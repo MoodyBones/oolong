@@ -34,6 +34,7 @@ Complete deployment guide for setting up the Goodsomeday platform from scratch.
    - **Authentication:** SSH key (generate if you don't have one)
 
 **Generate SSH key locally (if needed):**
+
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
 cat ~/.ssh/id_ed25519.pub  # Copy this to Hostinger
@@ -86,6 +87,7 @@ chmod 600 ~/.ssh/authorized_keys
 ```
 
 **Test SSH access from your local machine:**
+
 ```bash
 # From your local terminal
 ssh mel@YOUR_VPS_IP
@@ -133,6 +135,7 @@ sudo ufw status verbose
 ```
 
 **Security Checklist:**
+
 - ✅ Non-root user created with sudo privileges
 - ✅ SSH key authentication working
 - ✅ Root login disabled
@@ -207,6 +210,7 @@ nano ~/.n8n/config
 ```
 
 **Add these lines to `~/.n8n/config`:**
+
 ```bash
 export N8N_HOST=n8n.goodsomeday.com
 export N8N_PORT=5678
@@ -266,6 +270,7 @@ sudo nano /etc/nginx/sites-available/n8n.goodsomeday.com
 ```
 
 **Add this configuration:**
+
 ```nginx
 server {
     listen 80;
@@ -321,6 +326,7 @@ sudo certbot renew --dry-run
 ```
 
 **Certbot will automatically:**
+
 - Update Nginx config with SSL settings
 - Add SSL certificates
 - Set up auto-renewal
@@ -333,6 +339,7 @@ sudo certbot renew --dry-run
 4. Save credentials securely
 
 **Test Workflow:**
+
 1. Create new workflow in n8n
 2. Add "Webhook" trigger node
 3. Add "Respond to Webhook" node
@@ -432,6 +439,7 @@ sudo -u postgres psql goodsomeday_prod -c "\dt"
 ```
 
 **Expected output:**
+
 ```
              List of relations
  Schema |      Name       | Type  |  Owner
@@ -544,12 +552,14 @@ Should return JSON array of approved stories.
 ### 6.3 Monitoring Setup
 
 **PM2 Status:**
+
 ```bash
 pm2 status
 pm2 logs n8n  # View n8n logs
 ```
 
 **System Resources:**
+
 ```bash
 htop  # Install with: sudo apt install htop
 df -h  # Check disk space
@@ -563,6 +573,7 @@ free -h  # Check memory
 ### 7.1 Backup Database
 
 **Manual Backup:**
+
 ```bash
 # Create backup directory
 mkdir -p ~/backups
@@ -572,6 +583,7 @@ sudo -u postgres pg_dump goodsomeday_prod > ~/backups/goodsomeday_prod_$(date +%
 ```
 
 **Automated Backups (Future):**
+
 ```bash
 # Add to crontab
 crontab -e
@@ -596,17 +608,20 @@ sudo reboot
 ### 7.3 Monitor Logs
 
 **n8n Logs:**
+
 ```bash
 pm2 logs n8n
 ```
 
 **Nginx Logs:**
+
 ```bash
 sudo tail -f /var/log/nginx/error.log
 sudo tail -f /var/log/nginx/access.log
 ```
 
 **PostgreSQL Logs:**
+
 ```bash
 sudo tail -f /var/log/postgresql/postgresql-14-main.log
 ```
@@ -614,6 +629,7 @@ sudo tail -f /var/log/postgresql/postgresql-14-main.log
 ### 7.4 Renew SSL Certificate
 
 **Auto-renewal is configured**, but you can test it:
+
 ```bash
 sudo certbot renew --dry-run
 ```
@@ -627,12 +643,14 @@ Certificates auto-renew 30 days before expiration.
 ### n8n Not Accessible
 
 **Check PM2 status:**
+
 ```bash
 pm2 status
 pm2 logs n8n
 ```
 
 **Check Nginx:**
+
 ```bash
 sudo systemctl status nginx
 sudo nginx -t  # Test config
@@ -640,6 +658,7 @@ sudo tail -f /var/log/nginx/error.log
 ```
 
 **Check Firewall:**
+
 ```bash
 sudo ufw status verbose
 ```
@@ -647,17 +666,20 @@ sudo ufw status verbose
 ### Database Connection Failed
 
 **Check PostgreSQL is running:**
+
 ```bash
 sudo systemctl status postgresql
 sudo lsof -i :5432
 ```
 
 **Test connection:**
+
 ```bash
 psql -h localhost -U goodsomeday_user -d goodsomeday_prod
 ```
 
 **Check permissions:**
+
 ```bash
 sudo -u postgres psql goodsomeday_prod -c "\du"
 ```
@@ -665,6 +687,7 @@ sudo -u postgres psql goodsomeday_prod -c "\du"
 ### PM2 Service Conflicts
 
 **If PM2 shows inactive but n8n is running:**
+
 ```bash
 # Kill user session
 pm2 kill

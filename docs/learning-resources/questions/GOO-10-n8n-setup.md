@@ -11,6 +11,7 @@
 **Scenario:** You're explaining to a frontend dev friend why you needed Nginx when n8n already runs on port 5678.
 
 Walk through the architecture:
+
 1. Draw (or describe) the flow: `https://n8n.goodsomeday.com` → what happens at each step until it reaches n8n?
 2. What is Nginx actually doing here? Why not just access `http://72.60.78.175:5678` directly?
 3. You had to stop Docker because it was using port 80. Why does Nginx need port 80 AND port 443?
@@ -25,6 +26,7 @@ Walk through the architecture:
 **Scenario:** A non-technical friend asks, "What's the padlock icon in the browser and why did you need Certbot?"
 
 Explain without looking:
+
 1. What does SSL/TLS actually do? (Use a real-world analogy)
 2. Why did Certbot need your domain name to work? Why couldn't it work with just an IP address?
 3. SSL certificates expire every 90 days with Let's Encrypt. How does renewal work? What command did you run to test it?
@@ -39,6 +41,7 @@ Explain without looking:
 **Scenario:** Your VPS just rebooted (power outage, updates, whatever). How does n8n come back online automatically?
 
 Map out the chain:
+
 1. What is PM2's job? Why not just run `n8n start` and leave it?
 2. What's the difference between running n8n under your user vs. running it as a systemd service?
 3. You ran `pm2 startup` which created `pm2-mel.service`. Walk through what happens when the server boots:
@@ -54,11 +57,13 @@ Map out the chain:
 ## Self-Assessment
 
 After answering, rate yourself:
+
 - ✅ **Confident:** Could explain to someone else
 - 🤔 **Partial:** Got the concept but missed details
 - ❌ **Unclear:** Need to review the material
 
 **Review schedule:**
+
 - First review: Tomorrow (24 hours)
 - Second review: 3 days after completion
 - Third review: 1 week after completion
@@ -70,17 +75,14 @@ After answering, rate yourself:
 
 Use this space to write down what you learned from attempting these questions:
 
-**What I understood well:**
--
+## **What I understood well:**
 
-**What I need to review:**
--
+## **What I need to review:**
 
-**Resources to check:**
--
+## **Resources to check:**
 
 ---
 
-*Created: 2025-10-15*
-*Ticket: GOO-10 - Install and configure n8n*
-*Related docs: foundation.md, n8n documentation*
+_Created: 2025-10-15_
+_Ticket: GOO-10 - Install and configure n8n_
+_Related docs: foundation.md, n8n documentation_
