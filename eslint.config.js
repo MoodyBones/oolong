@@ -3,6 +3,7 @@ import tsPlugin from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import reactPlugin from 'eslint-plugin-react';
 import nextPlugin from '@next/eslint-plugin-next';
+import globals from 'globals';
 
 export default [
   {
@@ -21,13 +22,10 @@ export default [
         project: './tsconfig.json',
       },
       globals: {
+        ...globals.browser,
+        ...globals.node,
         React: 'readonly',
         JSX: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLFormElement: 'readonly',
       },
     },
     settings: {

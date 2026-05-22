@@ -1,29 +1,29 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/ui/button';
 
 describe('Button Component', () => {
   it('renders button with text', () => {
-    render(<Button variant="primary">Click me</Button>);
+    render(<Button>Click me</Button>);
     expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
   });
 
-  it('applies primary variant styles', () => {
-    render(<Button variant="primary">Primary</Button>);
+  it('applies default variant styles', () => {
+    render(<Button variant="default">Default</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('bg-[#F9D762]');
+    expect(button).toHaveAttribute('data-variant', 'default');
   });
 
   it('applies secondary variant styles', () => {
     render(<Button variant="secondary">Secondary</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('border-2');
+    expect(button).toHaveAttribute('data-variant', 'secondary');
   });
 
-  it('renders as link when href is provided', () => {
+  it('renders as child element when asChild is true', () => {
     render(
-      <Button variant="primary" href="/test">
-        Link Button
+      <Button asChild>
+        <a href="/test">Link Button</a>
       </Button>
     );
     expect(screen.getByRole('link')).toHaveAttribute('href', '/test');

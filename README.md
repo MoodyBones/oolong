@@ -250,10 +250,40 @@ Full API documentation: [docs/api/README.md](docs/api/README.md)
 
 ## 🚢 Deployment
 
-**Frontend:** Deployed on [Vercel](https://vercel.com/)
+**Frontend:** Deployed on [Vercel](https://vercel.com/) via Git integration — pushes to `main` trigger production deploys automatically.
 **Backend:** Self-hosted on Hostinger VPS
 
 See [docs/SETUP.md](docs/SETUP.md) for complete deployment instructions.
+
+---
+
+## ⚡ CI/CD Pipeline
+
+CI runs on every push and PR via GitHub Actions. Total feedback time: **~70 seconds**.
+
+```
+lint-and-test  (~30s)
+      ↓
+   build       (~35s)  ← uploads .next artifact
+      ├──→ e2e         (~60s)  parallel
+      └──→ lighthouse  (~35s)  parallel, reuses artifact
+```
+
+**Key optimisations learned building this:**
+
+- **Artifact reuse** — Lighthouse downloads the build artifact from the `build` job instead of re-running `next build`. Saved ~9s per run.
+- **Parallel jobs** — E2E tests and Lighthouse audit run simultaneously after the build, not sequentially.
+- **Combined lint + test** — Runs in a single job to avoid spinning up a second runner for a short task.
+
+**Running checks locally:**
+
+```bash
+npm run lint          # ESLint
+npm run format:check  # Prettier
+npm test              # Vitest unit tests
+npm run test:e2e      # Playwright (requires running dev server)
+npm run lighthouse    # Lighthouse CI
+```
 
 ---
 

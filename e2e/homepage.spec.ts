@@ -12,13 +12,20 @@ test.describe('Homepage', () => {
   test('should display hero section', async ({ page }) => {
     const hero = page.locator('h1');
     await expect(hero).toBeVisible();
-    await expect(hero).toContainText(/career/i);
+    await expect(hero).toContainText(/hope comes from action/i);
   });
 
-  test('should have working navigation buttons', async ({ page }) => {
-    const submitBtn = page.getByRole('link', { name: /submit/i }).first();
+  test('should have working submit call-to-action', async ({ page }) => {
+    const submitBtn = page.getByRole('link', { name: /share your story/i });
     await expect(submitBtn).toBeVisible();
-    await expect(submitBtn).toHaveAttribute('href', expect.stringContaining('/'));
+    await expect(submitBtn).toHaveAttribute('href', '/submit');
+  });
+
+  test('should reveal a story fragment after selecting a stage', async ({ page }) => {
+    await page.getByRole('button', { name: /barrier/i }).click();
+
+    await expect(page.getByText(/barrier/i).first()).toBeVisible();
+    await expect(page.getByRole('button', { name: /read more stories/i })).toBeVisible();
   });
 
   test('should be responsive on mobile', async ({ page }) => {
