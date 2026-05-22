@@ -125,6 +125,24 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Start dev server
+        run: npm run start &
+        env:
+          NODE_ENV: production
+
+      - name: Wait for server
+        run: |
+          for i in {1..30}; do
+            if curl -f http://localhost:3000 > /dev/null 2>&1; then
+              echo "Server is ready"
+              exit 0
+            fi
+            echo "Waiting for server... ($i/30)"
+            sleep 2
+          done
+          echo "Server failed to start"
+          exit 1
+
       - name: Run Lighthouse CI
         uses: treosh/lighthouse-ci-action@v10
         with:
